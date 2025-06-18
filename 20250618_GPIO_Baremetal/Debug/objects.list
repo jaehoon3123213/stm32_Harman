@@ -1,0 +1,6 @@
+"./Src/driver/GPIO/GPIO.o"
+"./Src/driver/LedBar/LedBar.o"
+"./Src/main.o"
+"./Src/syscalls.o"
+"./Src/sysmem.o"
+"./Startup/startup_stm32f411retx.o"

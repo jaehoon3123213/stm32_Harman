@@ -1,0 +1,23 @@
+/*
+ * GPIO.c
+ *
+ *  Created on: Jun 18, 2025
+ *      Author: kccistc
+ */
+#include "GPIO.h"
+
+void GPIO_Init()
+{
+
+}
+
+void GPIO_WritePin()
+{
+
+}
+
+
+uint32_t GPIO ReadPin()
+{
+
+}

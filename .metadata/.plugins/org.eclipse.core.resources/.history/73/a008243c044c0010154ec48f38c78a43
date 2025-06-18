@@ -1,0 +1,36 @@
+/*
+ * GPIO.c
+ *
+ *  Created on: Jun 18, 2025
+ *      Author: kccistc
+ */
+#include "GPIO.h"
+#include <stdint.h>
+
+
+
+void GPIO_Init()
+{
+
+}
+
+
+
+void GPIO_WritePin(GPIO_TypeDef *GPIOx, uint32_t pinNum, pinstate pin_State)
+{
+	if(pin_State == PIN_SET) {
+	GPIOx -> ODR |= (1U<<pinNum);
+	}
+	else {
+		GPIOx-> ODR &= ~(1U<<pinNum);
+	}
+}
+
+
+
+
+uint32_t GPIO_ReadPin(GPIO_TypeDef *GPIOx, uint32_t pinNum)
+{
+return !((GPIOx->IDR & (1<<pinNum)) == 0);
+
+}
