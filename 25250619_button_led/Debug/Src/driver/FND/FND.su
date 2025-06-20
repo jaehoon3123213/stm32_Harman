@@ -1,0 +1,7 @@
+../Src/driver/FND/FND.c:21:6:FND_init	8	static
+../Src/driver/FND/FND.c:37:6:FND	32	static
+../Src/driver/FND/FND.c:73:6:FND0	8	static
+../Src/driver/FND/FND.c:81:6:FND10	8	static
+../Src/driver/FND/FND.c:89:6:FND100	8	static
+../Src/driver/FND/FND.c:97:6:FND1000	8	static
+../Src/driver/FND/FND.c:106:6:FND_Display	16	static

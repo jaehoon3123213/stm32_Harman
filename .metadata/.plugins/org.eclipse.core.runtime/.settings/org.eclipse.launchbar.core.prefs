@@ -1,7 +1,7 @@
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
-configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:0618LEDBlink,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:20250618_GPIO_Baremetal Debug
+configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:0618LEDBlink,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:20250618_GPIO_Baremetal Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:25250619_button_led,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:20250620_FND_TIM_interrupt
 eclipse.preferences.version=1
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:0618LEDBlink/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:0618LEDBlink/activeLaunchTarget=null\:---

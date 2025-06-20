@@ -1,0 +1,6 @@
+../Inc/core_cm4.h:1684:22:__NVIC_EnableIRQ	2
+../Src/ap/ap_main.c:44:5:ap_main	20
+../Src/ap/ap_main.c:151:6:STOPWATCH_COUNT	1
+../Src/ap/ap_main.c:159:6:CLOCK_COUNT	1
+../Src/ap/ap_main.c:167:6:TIM2_IRQHandler	2
+../Src/ap/ap_main.c:185:6:ap_init	1

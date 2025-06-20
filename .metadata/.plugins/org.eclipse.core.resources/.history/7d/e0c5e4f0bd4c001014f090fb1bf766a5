@@ -1,0 +1,83 @@
+///*
+// * button.c
+// *
+// *  Created on: Jun 19, 2025
+// *      Author: kccistc
+// */
+//
+//
+//#include "button.h"
+//
+//
+//enum {PUSHED = 0, RELEASED};
+//
+//
+//void Button_Init()
+//{
+//	GPIO_Init(GPIOC, 13, INPUT); //1
+//}
+//
+//
+//button_state_t Button_GetState()
+//	static uint32_t prevState = RELEASED;
+//	uint32_t curState;
+//	curState = GPIO_ReadPin(GPIOC, 13); //normal state is high
+//
+//	if(prevState == RELEASED && (curState == PUSHED)) {
+//		delay(3);
+//		prevState = PUSHED;
+//		return ACT_PUSHED;
+//	}
+//	else if(prevState == PUSHED && (curState == RELEASED)) {
+//		delay(3);
+//	    prevState = PUSHED;
+//		return ACT_RELEASED;
+//	}
+//
+//	return NO_ACT;
+//
+//}
+//
+
+
+
+
+#include "Button.h"
+
+
+enum {PUSHED=0, RELEASED};
+
+
+void Button_Init(){
+    GPIO_Init(GPIOB, 3, INPUT);
+}
+
+button_state_t Button_GetState(){
+
+    static uint32_t prevState = RELEASED; // static은 선언할 때 처음에만 초기화된다.
+    uint32_t curState;
+    curState = GPIO_ReadPin(GPIOB,3); // normal state is 1
+
+    if ((prevState == RELEASED) && (curState == PUSHED)) // 버튼 눌렀을 때
+    {
+        delay(2); // debounce
+        prevState = PUSHED;
+        return ACT_PUSHED;
+    }
+    else if ((prevState == PUSHED) && (curState == RELEASED)) // 버튼 땠을 때
+    {
+        delay(2); // debounce
+        prevState = RELEASED;
+        return ACT_RELEASED;
+    }
+
+    return NO_ACT;
+
+
+    return 0;
+
+}
+
+
+
+

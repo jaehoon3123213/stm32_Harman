@@ -1,0 +1,2 @@
+../Src/driver/SystemClock/SystemClock.c:14:6:SysyemClock_init	1
+../Src/driver/SystemClock/SystemClock.c:24:6:delay	3

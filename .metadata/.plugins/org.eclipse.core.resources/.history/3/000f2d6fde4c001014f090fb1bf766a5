@@ -1,0 +1,79 @@
+/*
+ * ap_main.c
+ *
+ *  Created on: Jun 19, 2025
+ *      Author: kccistc
+ */
+
+
+#include "ap_main.h"
+
+
+Button_Handler_t hBtnLeft;
+Button_Handler_t hBtnRight;
+Button_Handler_t hBtnOnOff;
+
+
+enum {OFF,LEFT, RIGHT};
+int ap_main()
+
+{
+	uint32_t led_state = 0;
+	uint32_t data;
+		data =31;
+
+	while(1)
+	{
+
+//		GPIO_WritePin(GPIOC, 8, PIN_SET);
+//		GPIO_WritePin(GPIOC, 6, PIN_SET);
+////		GPIO_WritePin(GPIOC, 5, PIN_SET);
+//		GPIO_WritePin(GPIOA, 12, PIN_SET);
+
+
+
+		FND(data);
+
+
+
+		switch (led_state)
+		{
+	      case LEFT:
+	         if (Button_GetState(&hBtnRight) == ACT_RELEASED) led_state = RIGHT;
+	         else if (Button_GetState(&hBtnOnOff) == ACT_RELEASED) led_state = OFF;
+	         data = 0;
+
+	      break;
+
+	      case RIGHT:
+	         if (Button_GetState(&hBtnLeft) == ACT_RELEASED) led_state = LEFT;
+	         else if (Button_GetState(&hBtnOnOff) == ACT_RELEASED) led_state = OFF;
+	         data_count++;
+	         if(data_count == 1000)
+	         {
+	         data++;
+	         data_count = 0;
+	         }
+	      break;
+
+	      case OFF:
+	         if (Button_GetState(&hBtnLeft) == ACT_RELEASED) led_state = LEFT;
+	         else if (Button_GetState(&hBtnRight) == ACT_RELEASED) led_state = RIGHT;
+	      break;
+	      }
+
+		delay(1);
+	}
+	return 0;
+}
+
+
+void ap_init()
+{
+	SysyemClock_init();
+	LED_Bar_init();
+	Button_Init(&hBtnRight, GPIOB, 3);
+	Button_Init(&hBtnLeft, GPIOB, 5);
+	Button_Init(&hBtnOnOff, GPIOA, 10);
+	FND_init();
+}

@@ -224,9 +224,9 @@ return !((GPIOx->IDR & (1<<pinNum)) == 0); // 1bit만 내보내기 위한
  80002ae:	4770      	bx	lr
 
 080002b0 <LED_Bar_Write>:
-      {GPIOC, 2},
-      {GPIOC, 3}
 };
+
+
 
 void LED_Bar_Write(uint8_t data)
 {

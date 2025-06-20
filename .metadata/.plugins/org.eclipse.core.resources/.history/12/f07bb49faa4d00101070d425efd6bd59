@@ -1,0 +1,132 @@
+/*
+ * ap_main.c
+ *
+ *  Created on: Jun 19, 2025
+ *      Author: kccistc
+ */
+
+
+#include "ap_main.h"
+
+
+Button_Handler_t hBtnLeft;
+Button_Handler_t hBtnRight;
+Button_Handler_t hBtnOnOff;
+
+
+
+enum {OFF,LEFT, RIGHT};
+
+enum{STOPWATCH,CLOCK};
+
+typedef struct
+{
+	uint32_t min;
+	uint32_t second;
+	uint32_t msecond;
+} stopwatch_t;
+
+uint32_t STOPWATCH_COUNT(uint32_t count,stopwatch_t* stopwatchx);
+
+
+int ap_main()
+
+{
+	uint8_t data = 1;
+	uint16_t count = 0;
+	uint32_t prevCounterTime = 0;
+	uint32_t mode_state = 0;
+	uint32_t stopwatch_state = 0;
+
+
+
+
+
+	stopwatch_t stopwatch;
+
+	while(1)
+	{
+
+
+		switch (mode_state)
+		{
+	      case STOPWATCH:
+	         if (Button_GetState(&hBtnRight) == ACT_RELEASED) mode_state = CLOCK;
+
+	 		switch (stopwatch_state)
+	 		{
+	 	          case LEFT:
+	 	         if (Button_GetState(&hBtnRight) == ACT_RELEASED) stopwatch_state = RIGHT;
+	 	         else if (Button_GetState(&hBtnOnOff) == ACT_RELEASED) stopwatch_state = OFF;
+	 	         data = 0;
+
+	 	      break;
+
+	 	      case RIGHT:
+	 	         if (Button_GetState(&hBtnLeft) == ACT_RELEASED) stopwatch_state = LEFT;
+	 	         else if (Button_GetState(&hBtnOnOff) == ACT_RELEASED) stopwatch_state = OFF;
+
+
+				if(getTick()- prevCounterTime >= 1000){
+					prevCounterTime = getTick();
+				STOPWATCH_COUNT(count,&stopwatch);
+				FND_writeData(stopwatch.min*1000+stopwatch.second*100+stopwatch.msecond);
+	 			}
+
+	 	      break;
+
+	 	      case OFF:
+	 	         if (Button_GetState(&hBtnLeft) == ACT_RELEASED) stopwatch_state = LEFT;
+	 	         else if (Button_GetState(&hBtnRight) == ACT_RELEASED) stopwatch_state = RIGHT;
+
+
+
+	 	      break;
+	 	      }
+
+
+	      break;
+
+	      case CLOCK:
+	         if (Button_GetState(&hBtnRight) == ACT_RELEASED) mode_state = STOPWATCH;
+
+	      break;
+
+	      }
+
+
+	}
+	return 0;
+}
+
+
+uint32_t STOPWATCH_COUNT(uint32_t count,stopwatch_t* stopwatchx)
+{
+	stopwatchx-> msecond = count % 100;
+	stopwatchx -> second = count / 100 % 60;
+	stopwatchx -> min = count / 6000;
+}
+
+void TIM2_IRQHandler(void)
+{
+	incTick();
+	FND_DispData();
+	TIM_ClearUIF(TIM2);
+}
+
+void ap_init()
+{
+	SysyemClock_init();
+	LED_Bar_init();
+	Button_Init(&hBtnRight, GPIOB, 3);
+	Button_Init(&hBtnLeft, GPIOB, 5);
+	Button_Init(&hBtnOnOff, GPIOA, 10);
+	FND_init();
+	TIM_Init(TIM2, 16-1, 1000-1);
+	TIM_CntStart(TIM2);
+	TIM_UIEnable(TIM2);
+	NVIC_EnableIRQ(TIM2_IRQn);
+
+}
+
+

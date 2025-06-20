@@ -1,0 +1,47 @@
+
+#include "FND.h"
+
+
+
+
+void FND_init()
+{
+ 	GPIO_Init(GPIOC, 8, OUTPUT); // D1
+ 	GPIO_Init(GPIOC, 6, OUTPUT); // D2
+ 	GPIO_Init(GPIOC, 5, OUTPUT); // D3
+ 	GPIO_Init(GPIOA, 12, OUTPUT); // D4
+ 	GPIO_Init(GPIOA, 11, OUTPUT); // A
+ 	GPIO_Init(GPIOB, 12, OUTPUT); // B
+ 	GPIO_Init(GPIOB, 2, OUTPUT); // C
+ 	GPIO_Init(GPIOB, 1, OUTPUT); // D
+ 	GPIO_Init(GPIOB, 15, OUTPUT); // E
+ 	GPIO_Init(GPIOB, 14, OUTPUT); // F
+ 	GPIO_Init(GPIOB, 13, OUTPUT); // G
+ 	GPIO_Init(GPIOC, 4, OUTPUT); // DP
+}
+
+
+
+//FND_Display(data)
+//{
+//	switch(data)
+//	{
+//	case 0:
+//	case 1:
+//	case 2:
+//	case 3:
+//	case 4:
+//	case 5:
+//	case 6:
+//	case 7:
+//	case 8:
+//
+//	}
+//
+//}
+//
+//FND_Display()
+//{
+//	GPIO_WritePin(GPIOC, pinNum, pin_State)
+//
+//};

@@ -1,4 +1,4 @@
-13:43:38 **** Incremental Build of configuration Debug for project 0618LEDBlink ****
+12:29:51 **** Build of configuration Debug for project 0618LEDBlink ****
 make -j16 all 
 arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o"
 arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o"
@@ -6,40 +6,12 @@ arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c" -mcp
 arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o"
 arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o"
 arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o"
-arm-none-eabi-gcc "../Core/Src/system_stm32f4xx.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/system_stm32f4xx.d" -MT"Core/Src/system_stm32f4xx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/system_stm32f4xx.o"
-../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c: In function 'HAL_InitTick':
-../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c:256:26: error: 'SystemCoreClock' undeclared (first use in this function)
-  256 |   if (HAL_SYSTICK_Config(SystemCoreClock / (1000U / uwTickFreq)) > 0U)
-      |                          ^~~~~~~~~~~~~~~
-../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c:256:26: note: each undeclared identifier is reported only once for each function it appears in
-../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c: In function 'HAL_SuspendTick':
-../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c:419:3: error: 'SysTick' undeclared (first use in this function)
-  419 |   SysTick->CTRL &= ~SysTick_CTRL_TICKINT_Msk;
-      |   ^~~~~~~
-../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c: In function 'HAL_NVIC_SetPriorityGrouping':
-../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c:147:3: warning: implicit declaration of function 'NVIC_SetPriorityGrouping'; did you mean 'HAL_NVIC_SetPriorityGrouping'? [-Wimplicit-function-declaration]
-  147 |   NVIC_SetPriorityGrouping(PriorityGroup);
-      |   ^~~~~~~~~~~~~~~~~~~~~~~~
-      |   HAL_NVIC_SetPriorityGrouping
-../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c: In function 'HAL_DMA_IRQHandler':
-../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c:750:22: error: 'SystemCoreClock' undeclared (first use in this function)
-  750 |   uint32_t timeout = SystemCoreClock / 9600U;
-      |                      ^~~~~~~~~~~~~~~
-../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c:750:22: note: each undeclared identifier is reported only once for each function it appears in
-../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c: In function 'HAL_NVIC_SetPriority':
-../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c:171:19: warning: implicit declaration of function 'NVIC_GetPriorityGrouping'; did you mean 'HAL_NVIC_GetPriorityGrouping'? [-Wimplicit-function-declaration]
-  171 |   prioritygroup = NVIC_GetPriorityGrouping();
-      |                   ^~~~~~~~~~~~~~~~~~~~~~~~
-      |                   HAL_NVIC_GetPriorityGrouping
 In file included from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h:29,
                  from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h:27,
                  from ../Core/Inc/stm32f4xx_hal_conf.h:275,
                  from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
                  from ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c:24:
 ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c: In function 'HAL_PWR_EnterSLEEPMode':
-../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c:419:21: error: 'SysTick_CTRL_TICKINT_Msk' undeclared (first use in this function)
-  419 |   SysTick->CTRL &= ~SysTick_CTRL_TICKINT_Msk;
-      |                     ^~~~~~~~~~~~~~~~~~~~~~~~
 ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c:401:13: error: 'SCB' undeclared (first use in this function)
   401 |   CLEAR_BIT(SCB->SCR, ((uint32_t)SCB_SCR_SLEEPDEEP_Msk));
       |             ^~~
@@ -52,16 +24,25 @@ In file included from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h:29
 ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h:213:33: note: in definition of macro 'CLEAR_BIT'
   213 | #define CLEAR_BIT(REG, BIT)   ((REG) &= ~(BIT))
       |                                 ^~~
-make: *** [Drivers/STM32F4xx_HAL_Driver/Src/subdir.mk:55: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o] Error 1
-../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c: In function 'HAL_ResumeTick':
-../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c:435:3: error: 'SysTick' undeclared (first use in this function)
-  435 |   SysTick->CTRL  |= SysTick_CTRL_TICKINT_Msk;
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c: In function 'HAL_InitTick':
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c:256:26: error: 'SystemCoreClock' undeclared (first use in this function)
+  256 |   if (HAL_SYSTICK_Config(SystemCoreClock / (1000U / uwTickFreq)) > 0U)
+      |                          ^~~~~~~~~~~~~~~
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c:256:26: note: each undeclared identifier is reported only once for each function it appears in
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c: In function 'HAL_NVIC_SetPriorityGrouping':
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c:147:3: warning: implicit declaration of function 'NVIC_SetPriorityGrouping'; did you mean 'HAL_NVIC_SetPriorityGrouping'? [-Wimplicit-function-declaration]
+  147 |   NVIC_SetPriorityGrouping(PriorityGroup);
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~
+      |   HAL_NVIC_SetPriorityGrouping
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c: In function 'HAL_DMA_IRQHandler':
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c: In function 'HAL_SuspendTick':
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c:419:3: error: 'SysTick' undeclared (first use in this function)
+  419 |   SysTick->CTRL &= ~SysTick_CTRL_TICKINT_Msk;
       |   ^~~~~~~
-make: *** Waiting for unfinished jobs....
-../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c:173:3: warning: implicit declaration of function 'NVIC_SetPriority'; did you mean 'HAL_NVIC_SetPriority'? [-Wimplicit-function-declaration]
-  173 |   NVIC_SetPriority(IRQn, NVIC_EncodePriority(prioritygroup, PreemptPriority, SubPriority));
-      |   ^~~~~~~~~~~~~~~~
-      |   HAL_NVIC_SetPriority
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c:750:22: error: 'SystemCoreClock' undeclared (first use in this function)
+  750 |   uint32_t timeout = SystemCoreClock / 9600U;
+      |                      ^~~~~~~~~~~~~~~
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c:750:22: note: each undeclared identifier is reported only once for each function it appears in
 ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c: In function 'HAL_RCC_ClockConfig':
 ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c:719:3: error: 'SystemCoreClock' undeclared (first use in this function)
   719 |   SystemCoreClock = HAL_RCC_GetSysClockFreq() >> AHBPrescTable[(RCC->CFGR & RCC_CFGR_HPRE) >> RCC_CFGR_HPRE_Pos];
@@ -73,15 +54,17 @@ make: *** Waiting for unfinished jobs....
 ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h:213:43: note: in definition of macro 'CLEAR_BIT'
   213 | #define CLEAR_BIT(REG, BIT)   ((REG) &= ~(BIT))
       |                                           ^~~
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c: In function 'HAL_RCC_DeInit':
 ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c:407:5: warning: implicit declaration of function '__WFI' [-Wimplicit-function-declaration]
   407 |     __WFI();
       |     ^~~~~
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c:3346:3: error: 'SystemCoreClock' undeclared (first use in this function)
+ 3346 |   SystemCoreClock = HSI_VALUE;
+      |   ^~~~~~~~~~~~~~~
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c:3346:3: note: each undeclared identifier is reported only once for each function it appears in
 ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c:414:7: warning: implicit declaration of function '__SEV' [-Wimplicit-function-declaration]
   414 |       __SEV();
       |       ^~~~~
-../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c:435:21: error: 'SysTick_CTRL_TICKINT_Msk' undeclared (first use in this function)
-  435 |   SysTick->CTRL  |= SysTick_CTRL_TICKINT_Msk;
-      |                     ^~~~~~~~~~~~~~~~~~~~~~~~
 ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c:415:7: warning: implicit declaration of function '__WFE' [-Wimplicit-function-declaration]
   415 |       __WFE();
       |       ^~~~~
@@ -92,27 +75,28 @@ make: *** Waiting for unfinished jobs....
 ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h:211:33: note: in definition of macro 'SET_BIT'
   211 | #define SET_BIT(REG, BIT)     ((REG) |= (BIT))
       |                                 ^~~
-../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c:173:26: warning: implicit declaration of function 'NVIC_EncodePriority' [-Wimplicit-function-declaration]
-  173 |   NVIC_SetPriority(IRQn, NVIC_EncodePriority(prioritygroup, PreemptPriority, SubPriority));
-      |                          ^~~~~~~~~~~~~~~~~~~
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c: In function 'HAL_NVIC_SetPriority':
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c:171:19: warning: implicit declaration of function 'NVIC_GetPriorityGrouping'; did you mean 'HAL_NVIC_GetPriorityGrouping'? [-Wimplicit-function-declaration]
+  171 |   prioritygroup = NVIC_GetPriorityGrouping();
+      |                   ^~~~~~~~~~~~~~~~~~~~~~~~
+      |                   HAL_NVIC_GetPriorityGrouping
 ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c:719:50: error: 'AHBPrescTable' undeclared (first use in this function)
   719 |   SystemCoreClock = HAL_RCC_GetSysClockFreq() >> AHBPrescTable[(RCC->CFGR & RCC_CFGR_HPRE) >> RCC_CFGR_HPRE_Pos];
       |                                                  ^~~~~~~~~~~~~
-../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c: In function 'HAL_RCC_DeInit':
-../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c:3346:3: error: 'SystemCoreClock' undeclared (first use in this function)
- 3346 |   SystemCoreClock = HSI_VALUE;
-      |   ^~~~~~~~~~~~~~~
-../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c:3346:3: note: each undeclared identifier is reported only once for each function it appears in
-../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c: In function 'HAL_NVIC_EnableIRQ':
-../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c:191:3: warning: implicit declaration of function 'NVIC_EnableIRQ'; did you mean 'HAL_NVIC_EnableIRQ'? [-Wimplicit-function-declaration]
-  191 |   NVIC_EnableIRQ(IRQn);
-      |   ^~~~~~~~~~~~~~
-      |   HAL_NVIC_EnableIRQ
-make: *** [Drivers/STM32F4xx_HAL_Driver/Src/subdir.mk:55: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o] Error 1
-../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c: In function 'HAL_RCC_GetHCLKFreq':
-../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c:945:10: error: 'SystemCoreClock' undeclared (first use in this function)
-  945 |   return SystemCoreClock;
-      |          ^~~~~~~~~~~~~~~
+make: *** [Drivers/STM32F4xx_HAL_Driver/Src/subdir.mk:55: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o] Error 1
+make: *** Waiting for unfinished jobs....
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c:419:21: error: 'SysTick_CTRL_TICKINT_Msk' undeclared (first use in this function)
+  419 |   SysTick->CTRL &= ~SysTick_CTRL_TICKINT_Msk;
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c: In function 'HAL_ResumeTick':
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c:435:3: error: 'SysTick' undeclared (first use in this function)
+  435 |   SysTick->CTRL  |= SysTick_CTRL_TICKINT_Msk;
+      |   ^~~~~~~
+make: *** [Drivers/STM32F4xx_HAL_Driver/Src/subdir.mk:55: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o] Error 1
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c:173:3: warning: implicit declaration of function 'NVIC_SetPriority'; did you mean 'HAL_NVIC_SetPriority'? [-Wimplicit-function-declaration]
+  173 |   NVIC_SetPriority(IRQn, NVIC_EncodePriority(prioritygroup, PreemptPriority, SubPriority));
+      |   ^~~~~~~~~~~~~~~~
+      |   HAL_NVIC_SetPriority
 ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c:455:32: error: 'SCB_SCR_SLEEPDEEP_Msk' undeclared (first use in this function)
   455 |   SET_BIT(SCB->SCR, ((uint32_t)SCB_SCR_SLEEPDEEP_Msk));
       |                                ^~~~~~~~~~~~~~~~~~~~~
@@ -126,31 +110,42 @@ make: *** [Drivers/STM32F4xx_HAL_Driver/Src/subdir.mk:55: Drivers/STM32F4xx_HAL_
 ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h:211:33: note: in definition of macro 'SET_BIT'
   211 | #define SET_BIT(REG, BIT)     ((REG) |= (BIT))
       |                                 ^~~
-make: *** [Drivers/STM32F4xx_HAL_Driver/Src/subdir.mk:55: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o] Error 1
-../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c: In function 'HAL_NVIC_DisableIRQ':
-../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c:207:3: warning: implicit declaration of function 'NVIC_DisableIRQ'; did you mean 'HAL_NVIC_DisableIRQ'? [-Wimplicit-function-declaration]
-  207 |   NVIC_DisableIRQ(IRQn);
-      |   ^~~~~~~~~~~~~~~
-      |   HAL_NVIC_DisableIRQ
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c: In function 'HAL_RCC_GetHCLKFreq':
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c:945:10: error: 'SystemCoreClock' undeclared (first use in this function)
+  945 |   return SystemCoreClock;
+      |          ^~~~~~~~~~~~~~~
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c:173:26: warning: implicit declaration of function 'NVIC_EncodePriority' [-Wimplicit-function-declaration]
+  173 |   NVIC_SetPriority(IRQn, NVIC_EncodePriority(prioritygroup, PreemptPriority, SubPriority));
+      |                          ^~~~~~~~~~~~~~~~~~~
 ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c: In function 'HAL_RCC_GetPCLK1Freq':
 ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c:957:36: error: 'APBPrescTable' undeclared (first use in this function)
   957 |   return (HAL_RCC_GetHCLKFreq() >> APBPrescTable[(RCC->CFGR & RCC_CFGR_PPRE1) >> RCC_CFGR_PPRE1_Pos]);
       |                                    ^~~~~~~~~~~~~
-../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c: In function 'HAL_NVIC_SystemReset':
-../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c:217:3: warning: implicit declaration of function 'NVIC_SystemReset'; did you mean 'HAL_NVIC_SystemReset'? [-Wimplicit-function-declaration]
-  217 |   NVIC_SystemReset();
-      |   ^~~~~~~~~~~~~~~~
-      |   HAL_NVIC_SystemReset
-../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c: In function 'HAL_RCC_GetPCLK2Freq':
-../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c:969:36: error: 'APBPrescTable' undeclared (first use in this function)
-  969 |   return (HAL_RCC_GetHCLKFreq() >> APBPrescTable[(RCC->CFGR & RCC_CFGR_PPRE2) >> RCC_CFGR_PPRE2_Pos]);
-      |                                    ^~~~~~~~~~~~~
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c:435:21: error: 'SysTick_CTRL_TICKINT_Msk' undeclared (first use in this function)
+  435 |   SysTick->CTRL  |= SysTick_CTRL_TICKINT_Msk;
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~
 ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c:494:32: error: 'SCB_SCR_SLEEPDEEP_Msk' undeclared (first use in this function)
   494 |   SET_BIT(SCB->SCR, ((uint32_t)SCB_SCR_SLEEPDEEP_Msk));
       |                                ^~~~~~~~~~~~~~~~~~~~~
 ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h:211:42: note: in definition of macro 'SET_BIT'
   211 | #define SET_BIT(REG, BIT)     ((REG) |= (BIT))
       |                                          ^~~
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c: In function 'HAL_PWR_EnableSleepOnExit':
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c:544:11: error: 'SCB' undeclared (first use in this function)
+  544 |   SET_BIT(SCB->SCR, ((uint32_t)SCB_SCR_SLEEPONEXIT_Msk));
+      |           ^~~
+../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h:211:33: note: in definition of macro 'SET_BIT'
+  211 | #define SET_BIT(REG, BIT)     ((REG) |= (BIT))
+      |                                 ^~~
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c: In function 'HAL_NVIC_EnableIRQ':
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c:191:3: warning: implicit declaration of function 'NVIC_EnableIRQ'; did you mean 'HAL_NVIC_EnableIRQ'? [-Wimplicit-function-declaration]
+  191 |   NVIC_EnableIRQ(IRQn);
+      |   ^~~~~~~~~~~~~~
+      |   HAL_NVIC_EnableIRQ
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c: In function 'HAL_RCC_GetPCLK2Freq':
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c:969:36: error: 'APBPrescTable' undeclared (first use in this function)
+  969 |   return (HAL_RCC_GetHCLKFreq() >> APBPrescTable[(RCC->CFGR & RCC_CFGR_PPRE2) >> RCC_CFGR_PPRE2_Pos]);
+      |                                    ^~~~~~~~~~~~~
 ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c: In function 'HAL_RCC_GetHCLKFreq':
 ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c:946:1: warning: control reaches end of non-void function [-Wreturn-type]
   946 | }
@@ -160,16 +155,34 @@ make: *** [Drivers/STM32F4xx_HAL_Driver/Src/subdir.mk:55: Drivers/STM32F4xx_HAL_
   958 | }
       | ^
 ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c: In function 'HAL_RCC_GetPCLK2Freq':
-../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c: In function 'HAL_PWR_EnableSleepOnExit':
-../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c:544:11: error: 'SCB' undeclared (first use in this function)
-  544 |   SET_BIT(SCB->SCR, ((uint32_t)SCB_SCR_SLEEPONEXIT_Msk));
-      |           ^~~
-../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h:211:33: note: in definition of macro 'SET_BIT'
-  211 | #define SET_BIT(REG, BIT)     ((REG) |= (BIT))
-      |                                 ^~~
 ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c:970:1: warning: control reaches end of non-void function [-Wreturn-type]
   970 | }
       | ^
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c: In function 'HAL_NVIC_DisableIRQ':
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c:207:3: warning: implicit declaration of function 'NVIC_DisableIRQ'; did you mean 'HAL_NVIC_DisableIRQ'? [-Wimplicit-function-declaration]
+  207 |   NVIC_DisableIRQ(IRQn);
+      |   ^~~~~~~~~~~~~~~
+      |   HAL_NVIC_DisableIRQ
+make: *** [Drivers/STM32F4xx_HAL_Driver/Src/subdir.mk:55: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o] Error 1
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c:544:32: error: 'SCB_SCR_SLEEPONEXIT_Msk' undeclared (first use in this function)
+  544 |   SET_BIT(SCB->SCR, ((uint32_t)SCB_SCR_SLEEPONEXIT_Msk));
+      |                                ^~~~~~~~~~~~~~~~~~~~~~~
+../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h:211:42: note: in definition of macro 'SET_BIT'
+  211 | #define SET_BIT(REG, BIT)     ((REG) |= (BIT))
+      |                                          ^~~
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c: In function 'HAL_PWR_DisableSleepOnExit':
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c: In function 'HAL_NVIC_SystemReset':
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c:556:13: error: 'SCB' undeclared (first use in this function)
+  556 |   CLEAR_BIT(SCB->SCR, ((uint32_t)SCB_SCR_SLEEPONEXIT_Msk));
+      |             ^~~
+../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h:213:33: note: in definition of macro 'CLEAR_BIT'
+  213 | #define CLEAR_BIT(REG, BIT)   ((REG) &= ~(BIT))
+      |                                 ^~~
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c:217:3: warning: implicit declaration of function 'NVIC_SystemReset'; did you mean 'HAL_NVIC_SystemReset'? [-Wimplicit-function-declaration]
+  217 |   NVIC_SystemReset();
+      |   ^~~~~~~~~~~~~~~~
+      |   HAL_NVIC_SystemReset
+make: *** [Drivers/STM32F4xx_HAL_Driver/Src/subdir.mk:55: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o] Error 1
 ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c: In function 'HAL_SYSTICK_Config':
 ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c:229:11: warning: implicit declaration of function 'SysTick_Config'; did you mean 'HAL_SYSTICK_Config'? [-Wimplicit-function-declaration]
   229 |    return SysTick_Config(TicksNumb);
@@ -183,30 +196,6 @@ make: *** [Drivers/STM32F4xx_HAL_Driver/Src/subdir.mk:55: Drivers/STM32F4xx_HAL_
   262 |   SCB->SHCSR &= ~SCB_SHCSR_MEMFAULTENA_Msk;
       |   ^~~
 ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c:262:3: note: each undeclared identifier is reported only once for each function it appears in
-make: *** [Drivers/STM32F4xx_HAL_Driver/Src/subdir.mk:55: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o] Error 1
-../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c:544:32: error: 'SCB_SCR_SLEEPONEXIT_Msk' undeclared (first use in this function)
-  544 |   SET_BIT(SCB->SCR, ((uint32_t)SCB_SCR_SLEEPONEXIT_Msk));
-      |                                ^~~~~~~~~~~~~~~~~~~~~~~
-../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h:211:42: note: in definition of macro 'SET_BIT'
-  211 | #define SET_BIT(REG, BIT)     ((REG) |= (BIT))
-      |                                          ^~~
-../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c: In function 'HAL_PWR_DisableSleepOnExit':
-../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c:556:13: error: 'SCB' undeclared (first use in this function)
-  556 |   CLEAR_BIT(SCB->SCR, ((uint32_t)SCB_SCR_SLEEPONEXIT_Msk));
-      |             ^~~
-../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h:213:33: note: in definition of macro 'CLEAR_BIT'
-  213 | #define CLEAR_BIT(REG, BIT)   ((REG) &= ~(BIT))
-      |                                 ^~~
-../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c:262:18: error: 'SCB_SHCSR_MEMFAULTENA_Msk' undeclared (first use in this function)
-  262 |   SCB->SHCSR &= ~SCB_SHCSR_MEMFAULTENA_Msk;
-      |                  ^~~~~~~~~~~~~~~~~~~~~~~~~
-../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c:265:3: error: 'MPU' undeclared (first use in this function)
-  265 |   MPU->CTRL = 0U;
-      |   ^~~
-../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c: In function 'HAL_MPU_Enable':
-../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c:282:3: error: 'MPU' undeclared (first use in this function)
-  282 |   MPU->CTRL = MPU_Control | MPU_CTRL_ENABLE_Msk;
-      |   ^~~
 ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c:556:34: error: 'SCB_SCR_SLEEPONEXIT_Msk' undeclared (first use in this function)
   556 |   CLEAR_BIT(SCB->SCR, ((uint32_t)SCB_SCR_SLEEPONEXIT_Msk));
       |                                  ^~~~~~~~~~~~~~~~~~~~~~~
@@ -220,11 +209,15 @@ make: *** [Drivers/STM32F4xx_HAL_Driver/Src/subdir.mk:55: Drivers/STM32F4xx_HAL_
 ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h:211:33: note: in definition of macro 'SET_BIT'
   211 | #define SET_BIT(REG, BIT)     ((REG) |= (BIT))
       |                                 ^~~
-../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c:282:29: error: 'MPU_CTRL_ENABLE_Msk' undeclared (first use in this function)
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c:262:18: error: 'SCB_SHCSR_MEMFAULTENA_Msk' undeclared (first use in this function)
+  262 |   SCB->SHCSR &= ~SCB_SHCSR_MEMFAULTENA_Msk;
+      |                  ^~~~~~~~~~~~~~~~~~~~~~~~~
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c:265:3: error: 'MPU' undeclared (first use in this function)
+  265 |   MPU->CTRL = 0U;
+      |   ^~~
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c: In function 'HAL_MPU_Enable':
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c:282:3: error: 'MPU' undeclared (first use in this function)
   282 |   MPU->CTRL = MPU_Control | MPU_CTRL_ENABLE_Msk;
-      |                             ^~~~~~~~~~~~~~~~~~~
-../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c:285:3: error: 'SCB' undeclared (first use in this function)
-  285 |   SCB->SHCSR |= SCB_SHCSR_MEMFAULTENA_Msk;
       |   ^~~
 ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c:568:32: error: 'SCB_SCR_SEVONPEND_Msk' undeclared (first use in this function)
   568 |   SET_BIT(SCB->SCR, ((uint32_t)SCB_SCR_SEVONPEND_Msk));
@@ -239,6 +232,18 @@ make: *** [Drivers/STM32F4xx_HAL_Driver/Src/subdir.mk:55: Drivers/STM32F4xx_HAL_
 ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h:213:33: note: in definition of macro 'CLEAR_BIT'
   213 | #define CLEAR_BIT(REG, BIT)   ((REG) &= ~(BIT))
       |                                 ^~~
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c:282:29: error: 'MPU_CTRL_ENABLE_Msk' undeclared (first use in this function)
+  282 |   MPU->CTRL = MPU_Control | MPU_CTRL_ENABLE_Msk;
+      |                             ^~~~~~~~~~~~~~~~~~~
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c:285:3: error: 'SCB' undeclared (first use in this function)
+  285 |   SCB->SHCSR |= SCB_SHCSR_MEMFAULTENA_Msk;
+      |   ^~~
+../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c:580:34: error: 'SCB_SCR_SEVONPEND_Msk' undeclared (first use in this function)
+  580 |   CLEAR_BIT(SCB->SCR, ((uint32_t)SCB_SCR_SEVONPEND_Msk));
+      |                                  ^~~~~~~~~~~~~~~~~~~~~
+../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h:213:43: note: in definition of macro 'CLEAR_BIT'
+  213 | #define CLEAR_BIT(REG, BIT)   ((REG) &= ~(BIT))
+      |                                           ^~~
 ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c:285:17: error: 'SCB_SHCSR_MEMFAULTENA_Msk' undeclared (first use in this function)
   285 |   SCB->SHCSR |= SCB_SHCSR_MEMFAULTENA_Msk;
       |                 ^~~~~~~~~~~~~~~~~~~~~~~~~
@@ -248,17 +253,11 @@ make: *** [Drivers/STM32F4xx_HAL_Driver/Src/subdir.mk:55: Drivers/STM32F4xx_HAL_
 ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c:289:3: warning: implicit declaration of function '__ISB' [-Wimplicit-function-declaration]
   289 |   __ISB();
       |   ^~~~~
+make: *** [Drivers/STM32F4xx_HAL_Driver/Src/subdir.mk:55: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o] Error 1
 ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c: In function 'HAL_MPU_EnableRegion':
 ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c:302:3: error: 'MPU' undeclared (first use in this function)
   302 |   MPU->RNR = RegionNumber;
       |   ^~~
-../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c:580:34: error: 'SCB_SCR_SEVONPEND_Msk' undeclared (first use in this function)
-  580 |   CLEAR_BIT(SCB->SCR, ((uint32_t)SCB_SCR_SEVONPEND_Msk));
-      |                                  ^~~~~~~~~~~~~~~~~~~~~
-../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h:213:43: note: in definition of macro 'CLEAR_BIT'
-  213 | #define CLEAR_BIT(REG, BIT)   ((REG) &= ~(BIT))
-      |                                           ^~~
-make: *** [Drivers/STM32F4xx_HAL_Driver/Src/subdir.mk:55: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o] Error 1
 In file included from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h:29,
                  from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h:27,
                  from ../Core/Inc/stm32f4xx_hal_conf.h:275,
@@ -361,5 +360,5 @@ In file included from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h:29
 make: *** [Drivers/STM32F4xx_HAL_Driver/Src/subdir.mk:55: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o] Error 1
 "make -j16 all" terminated with exit code 2. Build might be incomplete.
 
-13:43:39 Build Failed. 56 errors, 25 warnings. (took 488ms)
+12:29:52 Build Failed. 56 errors, 25 warnings. (took 799ms)
 

@@ -1,100 +1,28 @@
-17:20:10 **** Incremental Build of configuration Debug for project 20250618_GPIO_Baremetal ****
+18:05:26 **** Incremental Build of configuration Debug for project 20250620_FND_TIM_interrupt ****
 make -j16 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411RETx -c -I../Inc -I"C:/stm32_Harman/20250618_GPIO_Baremetal/Src/driver/GPIO" -I"C:/stm32_Harman/20250618_GPIO_Baremetal/Src/driver/LedBar" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-../Src/main.c:24: warning: "PERIPH_BASE" redefined
-   24 | #define PERIPH_BASE                (0x40000000UL)           // unsigned 4bytes
-      | 
-In file included from ../Src/main.c:20:
-../Inc/stm32f411xe.h:638: note: this is the location of the previous definition
-  638 | #define PERIPH_BASE           0x40000000UL /*!< Peripheral base address in the alias region                                */
-      | 
-../Src/main.c:31: warning: "APB1PERIPH_BASE" redefined
-   31 | #define APB1PERIPH_BASE            (PERIPH_BASE + APB1PERIPH_OFFSET)
-      | 
-../Inc/stm32f411xe.h:651: note: this is the location of the previous definition
-  651 | #define APB1PERIPH_BASE       PERIPH_BASE
-      | 
-../Src/main.c:32: warning: "APB2PERIPH_BASE" redefined
-   32 | #define APB2PERIPH_BASE            (PERIPH_BASE + APB2PERIPH_OFFSET)
-      | 
-../Inc/stm32f411xe.h:652: note: this is the location of the previous definition
-  652 | #define APB2PERIPH_BASE       (PERIPH_BASE + 0x00010000UL)
-      | 
-../Src/main.c:34: warning: "AHB1PERIPH_BASE" redefined
-   34 | #define AHB1PERIPH_BASE            (PERIPH_BASE + AHB1PERIPH_OFFSET)
-      | 
-../Inc/stm32f411xe.h:653: note: this is the location of the previous definition
-  653 | #define AHB1PERIPH_BASE       (PERIPH_BASE + 0x00020000UL)
-      | 
-../Src/main.c:46: warning: "GPIOA_BASE" redefined
-   46 | #define GPIOA_BASE (AHB1PERIPH_BASE + GPIOA_OFFSET)
-      | 
-../Inc/stm32f411xe.h:693: note: this is the location of the previous definition
-  693 | #define GPIOA_BASE            (AHB1PERIPH_BASE + 0x0000UL)
-      | 
-../Src/main.c:47: warning: "GPIOB_BASE" redefined
-   47 | #define GPIOB_BASE (AHB1PERIPH_BASE + GPIOB_OFFSET)
-      | 
-../Inc/stm32f411xe.h:694: note: this is the location of the previous definition
-  694 | #define GPIOB_BASE            (AHB1PERIPH_BASE + 0x0400UL)
-      | 
-../Src/main.c:48: warning: "GPIOC_BASE" redefined
-   48 | #define GPIOC_BASE (AHB1PERIPH_BASE + GPIOC_OFFSET)
-      | 
-../Inc/stm32f411xe.h:695: note: this is the location of the previous definition
-  695 | #define GPIOC_BASE            (AHB1PERIPH_BASE + 0x0800UL)
-      | 
-../Src/main.c:49: warning: "GPIOD_BASE" redefined
-   49 | #define GPIOD_BASE (AHB1PERIPH_BASE + GPIOD_OFFSET)
-      | 
-../Inc/stm32f411xe.h:696: note: this is the location of the previous definition
-  696 | #define GPIOD_BASE            (AHB1PERIPH_BASE + 0x0C00UL)
-      | 
-../Src/main.c:54: warning: "RCC_BASE" redefined
-   54 | #define RCC_BASE   (AHB1PERIPH_BASE + RCC_OFFSET)
-      | 
-../Inc/stm32f411xe.h:700: note: this is the location of the previous definition
-  700 | #define RCC_BASE              (AHB1PERIPH_BASE + 0x3800UL)
-      | 
-../Src/main.c:56: warning: "RCC" redefined
-   56 | #define RCC ((RCC_TypeDef *)(RCC_BASE))
-      | 
-../Inc/stm32f411xe.h:789: note: this is the location of the previous definition
-  789 | #define RCC                 ((RCC_TypeDef *) RCC_BASE)
-      | 
-../Src/main.c:92: warning: "GPIOA" redefined
-   92 | #define GPIOA ((GPIO_TypeDef *) (GPIOA_BASE))
-      | 
-../Inc/stm32f411xe.h:782: note: this is the location of the previous definition
-  782 | #define GPIOA               ((GPIO_TypeDef *) GPIOA_BASE)
-      | 
-../Src/main.c:93: warning: "GPIOB" redefined
-   93 | #define GPIOB ((GPIO_TypeDef *) (GPIOB_BASE))
-      | 
-../Inc/stm32f411xe.h:783: note: this is the location of the previous definition
-  783 | #define GPIOB               ((GPIO_TypeDef *) GPIOB_BASE)
-      | 
-../Src/main.c:94: warning: "GPIOC" redefined
-   94 | #define GPIOC ((GPIO_TypeDef *) (GPIOC_BASE))
-      | 
-../Inc/stm32f411xe.h:784: note: this is the location of the previous definition
-  784 | #define GPIOC               ((GPIO_TypeDef *) GPIOC_BASE)
-      | 
-arm-none-eabi-gcc -o "20250618_GPIO_Baremetal.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\stm32_Harman\20250618_GPIO_Baremetal\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="20250618_GPIO_Baremetal.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 20250618_GPIO_Baremetal.elf
+arm-none-eabi-gcc "../Src/ap/ap_main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411xE -DSTM32 -DSTM32F4 -DSTM32F411RETx -c -I../Inc -I"C:/stm32_Harman/20250620_FND_TIM_interrupt/Src/driver/button" -I"C:/stm32_Harman/20250620_FND_TIM_interrupt/Src/driver/FND" -I"C:/stm32_Harman/20250620_FND_TIM_interrupt/Src/driver/GPIO" -I"C:/stm32_Harman/20250620_FND_TIM_interrupt/Src/driver/LedBar" -I"C:/stm32_Harman/20250620_FND_TIM_interrupt/Src/driver/SystemClock" -I"C:/stm32_Harman/20250620_FND_TIM_interrupt/Src/ap" -I"C:/stm32_Harman/20250620_FND_TIM_interrupt/Src/driver/TIM" -I"C:/stm32_Harman/20250620_FND_TIM_interrupt/Src/driver/SysTick" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/ap/ap_main.d" -MT"Src/ap/ap_main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/ap/ap_main.o"
+../Src/ap/ap_main.c: In function 'ap_main':
+../Src/ap/ap_main.c:54:18: warning: unused variable 'clock_state' [-Wunused-variable]
+   54 |         uint32_t clock_state = 0;
+      |                  ^~~~~~~~~~~
+../Src/ap/ap_main.c:47:17: warning: variable 'data' set but not used [-Wunused-but-set-variable]
+   47 |         uint8_t data = 1;
+      |                 ^~~~
+arm-none-eabi-gcc -o "20250620_FND_TIM_interrupt.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\stm32_Harman\20250620_FND_TIM_interrupt\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="20250620_FND_TIM_interrupt.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 20250620_FND_TIM_interrupt.elf
  
-arm-none-eabi-size  20250618_GPIO_Baremetal.elf 
-arm-none-eabi-objdump -h -S 20250618_GPIO_Baremetal.elf  > "20250618_GPIO_Baremetal.list"
+arm-none-eabi-size  20250620_FND_TIM_interrupt.elf 
+arm-none-eabi-objdump -h -S 20250620_FND_TIM_interrupt.elf  > "20250620_FND_TIM_interrupt.list"
    text	   data	    bss	    dec	    hex	filename
-   1284	     64	   1568	   2916	    b64	20250618_GPIO_Baremetal.elf
+   3948	     96	   1640	   5684	   1634	20250620_FND_TIM_interrupt.elf
 Finished building: default.size.stdout
  
-Finished building: 20250618_GPIO_Baremetal.list
+Finished building: 20250620_FND_TIM_interrupt.list
  
-17:20:12 **** Incremental Build of configuration Debug for project 20250618_GPIO_Baremetal ****
+18:05:27 **** Incremental Build of configuration Debug for project 20250620_FND_TIM_interrupt ****
 make -j16 all 
-arm-none-eabi-size  20250618_GPIO_Baremetal.elf 
+arm-none-eabi-size  20250620_FND_TIM_interrupt.elf 
    text	   data	    bss	    dec	    hex	filename
-   1284	     64	   1568	   2916	    b64	20250618_GPIO_Baremetal.elf
+   3948	     96	   1640	   5684	   1634	20250620_FND_TIM_interrupt.elf
 Finished building: default.size.stdout
  

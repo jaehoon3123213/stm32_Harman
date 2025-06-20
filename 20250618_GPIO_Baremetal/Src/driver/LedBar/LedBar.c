@@ -23,6 +23,8 @@ LED_Bar_TypeDef ledBar[8] = {
       {GPIOC, 3}
 };
 
+
+
 void LED_Bar_Write(uint8_t data)
 {
    for (int i=0; i<8; i++){

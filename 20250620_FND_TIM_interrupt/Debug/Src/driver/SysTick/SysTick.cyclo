@@ -1,0 +1,2 @@
+../Src/driver/SysTick/SysTick.c:13:10:getTick	1
+../Src/driver/SysTick/SysTick.c:18:10:incTick	1
