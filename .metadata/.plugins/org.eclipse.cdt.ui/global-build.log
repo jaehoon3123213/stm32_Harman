@@ -1,28 +1,29 @@
-18:05:26 **** Incremental Build of configuration Debug for project 20250620_FND_TIM_interrupt ****
+17:01:08 **** Incremental Build of configuration Debug for project 20250623_TimeWatch_StopWatch ****
 make -j16 all 
-arm-none-eabi-gcc "../Src/ap/ap_main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F411xE -DSTM32 -DSTM32F4 -DSTM32F411RETx -c -I../Inc -I"C:/stm32_Harman/20250620_FND_TIM_interrupt/Src/driver/button" -I"C:/stm32_Harman/20250620_FND_TIM_interrupt/Src/driver/FND" -I"C:/stm32_Harman/20250620_FND_TIM_interrupt/Src/driver/GPIO" -I"C:/stm32_Harman/20250620_FND_TIM_interrupt/Src/driver/LedBar" -I"C:/stm32_Harman/20250620_FND_TIM_interrupt/Src/driver/SystemClock" -I"C:/stm32_Harman/20250620_FND_TIM_interrupt/Src/ap" -I"C:/stm32_Harman/20250620_FND_TIM_interrupt/Src/driver/TIM" -I"C:/stm32_Harman/20250620_FND_TIM_interrupt/Src/driver/SysTick" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/ap/ap_main.d" -MT"Src/ap/ap_main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/ap/ap_main.o"
-../Src/ap/ap_main.c: In function 'ap_main':
-../Src/ap/ap_main.c:54:18: warning: unused variable 'clock_state' [-Wunused-variable]
-   54 |         uint32_t clock_state = 0;
-      |                  ^~~~~~~~~~~
-../Src/ap/ap_main.c:47:17: warning: variable 'data' set but not used [-Wunused-but-set-variable]
-   47 |         uint8_t data = 1;
-      |                 ^~~~
-arm-none-eabi-gcc -o "20250620_FND_TIM_interrupt.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\stm32_Harman\20250620_FND_TIM_interrupt\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="20250620_FND_TIM_interrupt.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 20250620_FND_TIM_interrupt.elf
+arm-none-eabi-gcc "../Core/ap/ap_main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/stm32_Harman/20250623_TimeWatch_StopWatch/Core/ap" -I"C:/stm32_Harman/20250623_TimeWatch_StopWatch/Core/driver" -I"C:/stm32_Harman/20250623_TimeWatch_StopWatch/Core/driver/FND" -I"C:/stm32_Harman/20250623_TimeWatch_StopWatch/Core/driver/LedBar" -I"C:/stm32_Harman/20250623_TimeWatch_StopWatch/Core/driver/button" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/ap/ap_main.d" -MT"Core/ap/ap_main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/ap/ap_main.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/stm32_Harman/20250623_TimeWatch_StopWatch/Core/ap" -I"C:/stm32_Harman/20250623_TimeWatch_StopWatch/Core/driver" -I"C:/stm32_Harman/20250623_TimeWatch_StopWatch/Core/driver/FND" -I"C:/stm32_Harman/20250623_TimeWatch_StopWatch/Core/driver/LedBar" -I"C:/stm32_Harman/20250623_TimeWatch_StopWatch/Core/driver/button" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "20250623_TimeWatch_StopWatch.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\stm32_Harman\20250623_TimeWatch_StopWatch\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="20250623_TimeWatch_StopWatch.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 20250623_TimeWatch_StopWatch.elf
  
-arm-none-eabi-size  20250620_FND_TIM_interrupt.elf 
-arm-none-eabi-objdump -h -S 20250620_FND_TIM_interrupt.elf  > "20250620_FND_TIM_interrupt.list"
+arm-none-eabi-size  20250623_TimeWatch_StopWatch.elf 
+arm-none-eabi-objdump -h -S 20250623_TimeWatch_StopWatch.elf  > "20250623_TimeWatch_StopWatch.list"
    text	   data	    bss	    dec	    hex	filename
-   3948	     96	   1640	   5684	   1634	20250620_FND_TIM_interrupt.elf
+  11136	    108	   1708	  12952	   3298	20250623_TimeWatch_StopWatch.elf
 Finished building: default.size.stdout
  
-Finished building: 20250620_FND_TIM_interrupt.list
+Finished building: 20250623_TimeWatch_StopWatch.list
  
-18:05:27 **** Incremental Build of configuration Debug for project 20250620_FND_TIM_interrupt ****
+17:01:10 **** Incremental Build of configuration Debug for project 20250623_TimeWatch_StopWatch ****
 make -j16 all 
-arm-none-eabi-size  20250620_FND_TIM_interrupt.elf 
+arm-none-eabi-size  20250623_TimeWatch_StopWatch.elf 
    text	   data	    bss	    dec	    hex	filename
-   3948	     96	   1640	   5684	   1634	20250620_FND_TIM_interrupt.elf
+  11136	    108	   1708	  12952	   3298	20250623_TimeWatch_StopWatch.elf
+Finished building: default.size.stdout
+ 
+17:01:19 **** Incremental Build of configuration Debug for project 20250623_TimeWatch_StopWatch ****
+make -j16 all 
+arm-none-eabi-size  20250623_TimeWatch_StopWatch.elf 
+   text	   data	    bss	    dec	    hex	filename
+  11136	    108	   1708	  12952	   3298	20250623_TimeWatch_StopWatch.elf
 Finished building: default.size.stdout
  
