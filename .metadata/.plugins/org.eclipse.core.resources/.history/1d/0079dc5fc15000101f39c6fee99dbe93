@@ -1,0 +1,40 @@
+/*
+ * Presenter.c
+ *
+ *  Created on: Jun 24, 2025
+ *      Author: kccistc
+ */
+
+#include "Presenter.h"
+#include <string.h>
+
+static watch_t dispData ={0};
+
+
+void Presenter_outData()
+{
+	dispData.id = watchData.id;
+	memc();
+}
+
+void Presenter_Excute()
+{
+	if(watchData.id == TIME_WATCH)
+	{
+		Presenter_DispTimeWatch(watchdata);
+     }
+	else {
+		Presenter_DispStopWatch(watchdata);
+	}
+
+}
+
+void Presenter_DispTimeWatch(watch_t watchData)
+{
+
+}
+
+void Presenter_DispStopWatch(watch_t watchData)
+{
+
+}

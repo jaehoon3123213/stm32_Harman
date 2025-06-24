@@ -1,0 +1,50 @@
+/*
+ * Controller.c
+ *
+ *  Created on: Jun 24, 2025
+ *      Author: kccistc
+ */
+
+typedef enum {TIME_WATCH, STOP_WATCH} watch_state_t;
+
+watch_state_t modstate = STOP_WATCH;
+
+static inputData_TypeDef controlData = {0};
+
+void Controller_execute()
+{
+	Controller_Mode();
+}
+
+void Controller_Mode()
+{
+    switch (modstate)
+    {
+    case TIME_WATCH:
+        if(controlData.data == ACT)
+       {
+        	controlData.data = NO_ACT;
+            modstate = STOP_WATCH;
+        }
+        Timewatch_excute();   // 함수 이름 정확히 맞추기
+        break;
+
+    case STOP_WATCH:
+        if(Button_GetState(&hBtnMode) == ACT_RELEASED)
+        {
+        	controlData.data = NO_ACT;
+        	modstate = TIME_WATCH;
+        }
+        Stopwatch_excute();  // 함수 이름 정확히 맞추기
+        break;
+    }
+}
+
+
+void Controller_SetInputData(inputData_TypeDef inputData)
+{
+	if(inputData.id == MODE) {
+		controlData.id =  MODE;
+		controlData.data = 	ACT;
+	}
+}

@@ -1,0 +1,69 @@
+/*
+ * ap_main.c
+ *
+ *  Created on: Jun 19, 2025
+ *      Author: kccistc
+ */
+
+
+#include "ap_main.h"
+
+
+
+
+typedef enum {TIME_WATCH, STOP_WATCH} watch_state_t;
+
+uint32_t tick_count;
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+{
+	if(htim->Instance == TIM2)
+	{
+		FND_DispDataCallBack();
+
+
+
+	    TimeWatch_IncTimeCallBack();
+	    StopWatch_IncTimeCallBack();
+	}
+}
+
+
+int ap_main()
+{
+    HAL_TIM_Base_Start_IT(&htim2);
+    watch_state_t modstate = STOP_WATCH;
+
+    while(1)
+    {
+
+        switch (modstate)
+        {
+        case TIME_WATCH:
+            if(Button_GetState(&hBtnMode) == ACT_RELEASED){
+                modstate = STOP_WATCH;
+
+            }
+            Timewatch_excute();   // 함수 이름 정확히 맞추기
+            break;
+
+        case STOP_WATCH:
+            if(Button_GetState(&hBtnMode) == ACT_RELEASED)
+            {
+                modstate = TIME_WATCH;
+                FND_WriteDp(0b1111, FND_DP_OFF);
+            }
+            Stopwatch_excute();  // 함수 이름 정확히 맞추기
+            break;
+        }
+    }
+
+    return 0;
+}
+
+
+void ap_init()
+{
+	Listener_Init();
+}
+
+

@@ -1,0 +1,23 @@
+/*
+ * Controller.h
+ *
+ *  Created on: Jun 24, 2025
+ *      Author: kccistc
+ */
+
+#ifndef AP_CONTROLLER_H_
+#define AP_CONTROLLER_H_
+
+typedef struct {
+	int id;
+	int data;
+
+}inputData_TypeDef;
+
+enum {MODE,STOPWATCH_RUN_STOP,STOPWATCH_CLEAR};
+enum {NO_ACT,ACT};
+Controller_SetInputData(inputData_TypeDef inputData);
+
+
+
+#endif /* AP_CONTROLLER_H_ */

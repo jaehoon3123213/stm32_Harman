@@ -1,0 +1,88 @@
+/*
+ * Listener.c
+ *
+ *  Created on: Jun 24, 2025
+ *      Author: kccistc
+ */
+
+#include "Listener.h"
+#include "usart.h"
+
+static void Listener_CheckButton(); // 외부에서 못부르게 하겠다!
+static void Listener_CheckUART();
+InputData_TypeDef inputData;
+
+void Listener_Init()
+{
+    Button_Init(&hBtnMode,  GPIOB, GPIO_PIN_5);
+    Button_Init(&hBtnRunStop,   GPIOB, GPIO_PIN_3);
+    Button_Init(&hBtnClear, GPIOA, GPIO_PIN_10);
+}
+
+void Listener_Execute()
+{
+    Listener_CheckButton();
+    Listener_CheckUART();
+}
+
+
+void Listener_CheckButton()
+{
+
+    if (Button_GetState(&hBtnMode) == ACT_RELEASED) // 모드 버튼
+    {
+        inputData.id = MODE;
+        inputData.data = MODE_ACT;
+        Controller_SetInputData(inputData);
+    }
+    else if (Button_GetState(&hBtnRunStop) == ACT_PUSHED) // 런스탑 버튼
+    {
+        inputData.id = STOPWATCH_RUN_STOP;
+        inputData.data = MODE_ACT;
+        Controller_SetInputData(inputData);
+    }
+    else if (Button_GetState(&hBtnClear) == ACT_PUSHED) // 클리어 버튼
+    {
+        inputData.id = STOPWATCH_CLEAR;
+        inputData.data = MODE_ACT;
+        Controller_SetInputData(inputData);
+    }
+    
+}
+
+void Listener_CheckUART()
+
+{
+	uint8_t str;
+	HAL_UART_Receive(&huart2, str, sizeof(str), 1000);
+    if (str == 'm') // 모드 버튼
+    {
+        inputData.id = MODE;
+        inputData.data = MODE_ACT;
+        Controller_SetInputData(inputData);
+    }
+    else if (str == 'r') // 런스탑 버튼
+    {
+        inputData.id = STOPWATCH_RUN_STOP;
+        inputData.data = MODE_ACT;
+        Controller_SetInputData(inputData);
+    }
+    else if (str == 'c') // 클리어 버튼
+    {
+        inputData.id = STOPWATCH_CLEAR;
+        inputData.data = MODE_ACT;
+        Controller_SetInputData(inputData);
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,2 @@
+../Core/driver/Ledbar/sys_clk/sys_clk.c:11:6:system_clk_Init	4	static
+../Core/driver/Ledbar/sys_clk/sys_clk.c:18:6:delay	24	static

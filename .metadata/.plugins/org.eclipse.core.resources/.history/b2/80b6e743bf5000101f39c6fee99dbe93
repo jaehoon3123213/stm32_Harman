@@ -1,0 +1,19 @@
+/*
+ * Presenter.c
+ *
+ *  Created on: Jun 24, 2025
+ *      Author: kccistc
+ */
+
+#include "Presenter.h"
+
+void Presenter_outData()
+{
+	if(watchData.id == TIME_WATCH)
+	{
+
+     }
+	else {
+
+	}
+}
