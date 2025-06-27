@@ -1,8 +1,12 @@
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
-configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:20250623_TimeWatch_StopWatch,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:20250624_TimeWatch_StopWatch2,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:0618LEDBlink,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:20250618_GPIO_Baremetal Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:25250619_button_led,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:20250620_FND_TIM_interrupt,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:20250624_TimeWatch_StopWatch_In_Proc_out_struct,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:20250624_Timewatch_Stopwatch_Structure Debug
+configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:20250624_TimeWatch_StopWatch2,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:0618LEDBlink,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:20250618_GPIO_Baremetal Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:25250619_button_led,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:20250620_FND_TIM_interrupt,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:20250624_Timewatch_Stopwatch_Structure Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:20250623_TimeWatch_StopWatch,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:MiniProject_Dog_Feed,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:20250625_TimeWatch_StopWatch Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:MiniProject_Dog_Feed (1)
 eclipse.preferences.version=1
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:0618LEDBlink/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:0618LEDBlink/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:20250624_TimeWatch_StopWatch2/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:20250624_TimeWatch_StopWatch_In_Proc_out_struct/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:20250625_TimeWatch_StopWatch\ Debug/activeLaunchMode=debug
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:20250625_TimeWatch_StopWatch/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:MiniProject_Dog_Feed\ (1)/activeLaunchMode=run

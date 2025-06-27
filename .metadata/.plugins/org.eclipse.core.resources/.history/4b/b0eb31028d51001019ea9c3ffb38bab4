@@ -1,0 +1,48 @@
+
+
+
+#include "LCD.h"
+
+uint8_t lcdData = 0;
+
+void LCD_cmdMode()
+{
+    lcdData |= (1<<LCD_R);
+    LCD_sendI2C(lcdData);
+}
+
+void LCD_charMode()
+{
+	lcdData |= (1<<LCD_E);
+	LCD_sendI2C(lcdData);
+}
+
+
+
+#define LCD_E 2
+
+void LCD_E_High()
+{
+	lcdData |= (1<<LCD_E);
+	LCD_sendI2C(lcdData);
+}
+
+void LCD_E_Low()
+{
+	lcdData &= ~(1<<LCD_E);
+	LCD_sendI2C(lcdData);
+}
+
+void LCD_sendData(uint8_t data)
+{
+    LCD_E_High();
+    lcdData = (lcdData & 0x0f) | (data & 0xf0);
+    LCD_sendI2C(lcdData);
+    LCD_E_Low();
+
+    LCD_E_High();
+    data = data <<4;
+    lcdData = (lcdData & 0x0f) | (data & 0xf0);
+    LCD_sendI2C(lcdData);
+    LCD_E_Low();
+}

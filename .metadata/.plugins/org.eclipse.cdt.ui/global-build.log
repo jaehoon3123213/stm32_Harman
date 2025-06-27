@@ -1,35 +1,70 @@
-17:13:02 **** Incremental Build of configuration Debug for project 20250624_Timewatch_Stopwatch_Structure ****
+16:42:48 **** Incremental Build of configuration Debug for project MiniProject_Dog_Feed ****
 make -j16 all 
-arm-none-eabi-gcc "../Core/ap/Src/ap_main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/stm32_Harman/20250624_Timewatch_Stopwatch_Structure/Core/ap" -I"C:/stm32_Harman/20250624_Timewatch_Stopwatch_Structure/Core/driver/Button" -I"C:/stm32_Harman/20250624_Timewatch_Stopwatch_Structure/Core/driver/FND" -I"C:/stm32_Harman/20250624_Timewatch_Stopwatch_Structure/Core/driver/Ledbar" -I"C:/stm32_Harman/20250624_Timewatch_Stopwatch_Structure/Core/ap/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/ap/Src/ap_main.d" -MT"Core/ap/Src/ap_main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/ap/Src/ap_main.o"
-../Core/ap/Src/ap_main.c: In function 'HAL_TIM_PeriodElapsedCallback':
-../Core/ap/Src/ap_main.c:17:9: warning: implicit declaration of function 'FND_Display_Data' [-Wimplicit-function-declaration]
-   17 |         FND_Display_Data();
-      |         ^~~~~~~~~~~~~~~~
-../Core/ap/Src/ap_main.c:18:9: warning: implicit declaration of function 'Timewatch_IncTimeCallBack' [-Wimplicit-function-declaration]
-   18 |         Timewatch_IncTimeCallBack();
-      |         ^~~~~~~~~~~~~~~~~~~~~~~~~
-../Core/ap/Src/ap_main.c:19:9: warning: implicit declaration of function 'stopwatch_IncTimeCallBack' [-Wimplicit-function-declaration]
-   19 |         stopwatch_IncTimeCallBack();
-      |         ^~~~~~~~~~~~~~~~~~~~~~~~~
-../Core/ap/Src/ap_main.c: In function 'ap_main':
-../Core/ap/Src/ap_main.c:37:8: warning: implicit declaration of function 'Controller_Execute' [-Wimplicit-function-declaration]
-   37 |        Controller_Execute();
-      |        ^~~~~~~~~~~~~~~~~~
-arm-none-eabi-gcc -o "20250624_Timewatch_Stopwatch_Structure.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\stm32_Harman\20250624_Timewatch_Stopwatch_Structure\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="20250624_Timewatch_Stopwatch_Structure.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 20250624_Timewatch_Stopwatch_Structure.elf
+arm-none-eabi-gcc "../Core/ap/src/Controller.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/ap" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/driver" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/driver/FND" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/driver/LedBar" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/ap/inc" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/ap/src" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/driver/LCD" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/driver/Button" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/driver/buzzer" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/driver/motor" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/driver/DHT11" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/driver/ultraSonic" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/ap/src/Controller.d" -MT"Core/ap/src/Controller.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/ap/src/Controller.o"
+arm-none-eabi-gcc "../Core/ap/src/Listener.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/ap" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/driver" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/driver/FND" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/driver/LedBar" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/ap/inc" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/ap/src" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/driver/LCD" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/driver/Button" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/driver/buzzer" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/driver/motor" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/driver/DHT11" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/driver/ultraSonic" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/ap/src/Listener.d" -MT"Core/ap/src/Listener.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/ap/src/Listener.o"
+arm-none-eabi-gcc "../Core/ap/src/Presenter.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/ap" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/driver" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/driver/FND" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/driver/LedBar" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/ap/inc" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/ap/src" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/driver/LCD" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/driver/Button" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/driver/buzzer" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/driver/motor" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/driver/DHT11" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/driver/ultraSonic" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/ap/src/Presenter.d" -MT"Core/ap/src/Presenter.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/ap/src/Presenter.o"
+arm-none-eabi-gcc "../Core/ap/src/ap_main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/ap" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/driver" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/driver/FND" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/driver/LedBar" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/ap/inc" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/ap/src" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/driver/LCD" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/driver/Button" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/driver/buzzer" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/driver/motor" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/driver/DHT11" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/driver/ultraSonic" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/ap/src/ap_main.d" -MT"Core/ap/src/ap_main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/ap/src/ap_main.o"
+arm-none-eabi-gcc "../Core/ap/src/remain_time.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/ap" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/driver" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/driver/FND" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/driver/LedBar" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/ap/inc" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/ap/src" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/driver/LCD" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/driver/Button" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/driver/buzzer" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/driver/motor" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/driver/DHT11" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/driver/ultraSonic" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/ap/src/remain_time.d" -MT"Core/ap/src/remain_time.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/ap/src/remain_time.o"
+arm-none-eabi-gcc "../Core/ap/src/sound.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/ap" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/driver" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/driver/FND" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/driver/LedBar" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/ap/inc" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/ap/src" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/driver/LCD" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/driver/Button" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/driver/buzzer" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/driver/motor" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/driver/DHT11" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/driver/ultraSonic" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/ap/src/sound.d" -MT"Core/ap/src/sound.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/ap/src/sound.o"
+arm-none-eabi-gcc "../Core/ap/src/stopWatch.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/ap" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/driver" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/driver/FND" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/driver/LedBar" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/ap/inc" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/ap/src" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/driver/LCD" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/driver/Button" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/driver/buzzer" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/driver/motor" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/driver/DHT11" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/driver/ultraSonic" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/ap/src/stopWatch.d" -MT"Core/ap/src/stopWatch.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/ap/src/stopWatch.o"
+arm-none-eabi-gcc "../Core/ap/src/timeWatch.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/ap" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/driver" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/driver/FND" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/driver/LedBar" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/ap/inc" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/ap/src" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/driver/LCD" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/driver/Button" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/driver/buzzer" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/driver/motor" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/driver/DHT11" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/driver/ultraSonic" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/ap/src/timeWatch.d" -MT"Core/ap/src/timeWatch.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/ap/src/timeWatch.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/ap" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/driver" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/driver/FND" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/driver/LedBar" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/ap/inc" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/ap/src" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/driver/LCD" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/driver/Button" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/driver/buzzer" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/driver/motor" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/driver/DHT11" -I"C:/stm32_Harman/MiniProject_Dog_Feed/Core/driver/ultraSonic" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/ap/src/Listener.c: In function 'Listener_tempData':
+../Core/ap/src/Listener.c:125:19: warning: implicit declaration of function 'UltraSonic_GetDistance' [-Wimplicit-function-declaration]
+  125 |        distance = UltraSonic_GetDistance();
+      |                   ^~~~~~~~~~~~~~~~~~~~~~
+../Core/ap/src/Presenter.c: In function 'Presenter_Excute':
+../Core/ap/src/Presenter.c:57:15: warning: unused variable 'scaled_remain' [-Wunused-variable]
+   57 |       uint8_t scaled_remain = (feed_Output_Data.feed_remain * 255) / 15;
+      |               ^~~~~~~~~~~~~
+../Core/ap/src/Presenter.c: In function 'Presenter_DispFeedStateLCD':
+../Core/ap/src/Presenter.c:104:33: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  104 |         sprintf(temp1, "T/H: %02d / %02d", temp_output, humid_output);
+      |                              ~~~^          ~~~~~~~~~~~
+      |                                 |          |
+      |                                 int        uint32_t {aka long unsigned int}
+      |                              %02ld
+../Core/ap/src/Presenter.c:104:40: warning: format '%d' expects argument of type 'int', but argument 4 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  104 |         sprintf(temp1, "T/H: %02d / %02d", temp_output, humid_output);
+      |                                     ~~~^                ~~~~~~~~~~~~
+      |                                        |                |
+      |                                        int              uint32_t {aka long unsigned int}
+      |                                     %02ld
+../Core/ap/src/Presenter.c: At top level:
+../Core/ap/src/Presenter.c:194:6: warning: 'Presenter_DispStopWatch' defined but not used [-Wunused-function]
+  194 | void Presenter_DispStopWatch(watch_t watchData)
+      |      ^~~~~~~~~~~~~~~~~~~~~~~
+../Core/ap/src/Presenter.c:188:6: warning: 'Presenter_DispTimeWatch' defined but not used [-Wunused-function]
+  188 | void Presenter_DispTimeWatch(watch_t watchData)
+      |      ^~~~~~~~~~~~~~~~~~~~~~~
+../Core/ap/src/Presenter.c: In function 'Presenter_DispFeedStateLCD':
+../Core/ap/src/Presenter.c:114:37: warning: '%-16s' directive output may be truncated writing between 16 and 31 bytes into a region of size 17 [-Wformat-truncation=]
+  114 |     snprintf(line0, sizeof(line0), "%-16s", temp0);
+      |                                     ^~~~~   ~~~~~
+../Core/ap/src/Presenter.c:114:5: note: 'snprintf' output between 17 and 32 bytes into a destination of size 17
+  114 |     snprintf(line0, sizeof(line0), "%-16s", temp0);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/ap/src/Presenter.c:115:37: warning: '%-16s' directive output may be truncated writing between 16 and 31 bytes into a region of size 17 [-Wformat-truncation=]
+  115 |     snprintf(line1, sizeof(line1), "%-16s", temp1);
+      |                                     ^~~~~   ~~~~~
+../Core/ap/src/Presenter.c:115:5: note: 'snprintf' output between 17 and 32 bytes into a destination of size 17
+  115 |     snprintf(line1, sizeof(line1), "%-16s", temp1);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "MiniProject_Dog_Feed.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\stm32_Harman\MiniProject_Dog_Feed\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MiniProject_Dog_Feed.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: MiniProject_Dog_Feed.elf
  
-arm-none-eabi-size  20250624_Timewatch_Stopwatch_Structure.elf 
-arm-none-eabi-objdump -h -S 20250624_Timewatch_Stopwatch_Structure.elf  > "20250624_Timewatch_Stopwatch_Structure.list"
+arm-none-eabi-size  MiniProject_Dog_Feed.elf 
+arm-none-eabi-objdump -h -S MiniProject_Dog_Feed.elf  > "MiniProject_Dog_Feed.list"
    text	   data	    bss	    dec	    hex	filename
-  16748	    212	   2108	  19068	   4a7c	20250624_Timewatch_Stopwatch_Structure.elf
+  32752	    264	   2728	  35744	   8ba0	MiniProject_Dog_Feed.elf
 Finished building: default.size.stdout
  
-Finished building: 20250624_Timewatch_Stopwatch_Structure.list
+Finished building: MiniProject_Dog_Feed.list
  
-17:13:04 **** Incremental Build of configuration Debug for project 20250624_Timewatch_Stopwatch_Structure ****
+16:42:50 **** Incremental Build of configuration Debug for project MiniProject_Dog_Feed ****
 make -j16 all 
-arm-none-eabi-size  20250624_Timewatch_Stopwatch_Structure.elf 
+arm-none-eabi-size  MiniProject_Dog_Feed.elf 
    text	   data	    bss	    dec	    hex	filename
-  16748	    212	   2108	  19068	   4a7c	20250624_Timewatch_Stopwatch_Structure.elf
+  32752	    264	   2728	  35744	   8ba0	MiniProject_Dog_Feed.elf
 Finished building: default.size.stdout
  

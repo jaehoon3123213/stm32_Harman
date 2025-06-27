@@ -1,0 +1,14 @@
+../Core/ap/src/Controller.c:24:6:Controller_Excute	1
+../Core/ap/src/Controller.c:39:6:Controller_SetInputData	9
+../Core/ap/src/Controller.c:76:6:Controller_UpdateFeedTimer	2
+../Core/ap/src/Controller.c:84:10:Controller_CalcFeedMotorDuration	1
+../Core/ap/src/Controller.c:92:9:Controller_CheckFeedRemainAlarm	1
+../Core/ap/src/Controller.c:98:9:Controller_CheckEnvironmentStatus	3
+../Core/ap/src/Controller.c:107:6:Control_Input_FSM	23
+../Core/ap/src/Controller.c:199:6:Control_TOP_FSM	11
+../Core/ap/src/Controller.c:237:6:SetFeedTimeOutFlag	1
+../Core/ap/src/Controller.c:243:13:FSM_StateToString	5
+../Core/ap/src/Controller.c:255:21:Controller_GetOutput	1
+../Core/ap/src/Controller.c:260:22:Controller_GetFlags	1
+../Core/ap/src/Controller.c:266:10:Read_Temp	1
+../Core/ap/src/Controller.c:271:10:Read_Humid	1

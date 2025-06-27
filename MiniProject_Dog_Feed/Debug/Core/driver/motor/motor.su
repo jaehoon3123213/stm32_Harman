@@ -1,0 +1,4 @@
+../Core/driver/motor/motor.c:9:6:motor_Init	16	static
+../Core/driver/motor/motor.c:16:6:motor_SetDuty	16	static
+../Core/driver/motor/motor.c:22:6:motor_Start	8	static
+../Core/driver/motor/motor.c:27:6:motor_Stop	8	static

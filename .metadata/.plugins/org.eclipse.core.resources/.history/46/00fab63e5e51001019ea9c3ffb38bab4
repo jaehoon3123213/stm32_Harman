@@ -1,0 +1,67 @@
+/*
+ * Presenter.c
+ *
+ *  Created on: Jun 24, 2025
+ *      Author: kccistc
+ */
+
+#include "Presenter.h"
+#include <string.h>
+
+static Watch_t dispData ={STOP_WATCH, 0,0,0,0};
+static void Presenter_DispStopWatch(Watch_t watchData);
+static void Presenter_DispTimeWatch(Watch_t watchData);
+
+void Presenter_outData(Watch_t Watchdata)
+{
+	dispData.id = Watchdata.id;
+	memcpy(&dispData, &Watchdata, sizeof(Watch_t));
+}
+
+void Presenter_Excute()
+{
+	if(dispData.id == TIME_WATCH)
+	{
+		Presenter_DispTimeWatch(dispData);
+     }
+	else {
+		Presenter_DispStopWatch(dispData);
+	}
+
+}
+
+void Presenter_DispTimeWatch(Watch_t watchData)
+{
+		FND_WriteDp(0b1011, FND_DP_OFF);
+		FND_writeData(watchData.hour*100 + watchData.min);
+		if (watchData.msec < 500)
+		{
+			FND_WriteDp(FND_DP_100, FND_DP_ON);
+		}
+		else
+		{
+			FND_WriteDp(FND_DP_100, FND_DP_OFF);
+		}
+}
+
+void Presenter_DispStopWatch(Watch_t watchData)
+{
+		FND_WriteDp(0b0110, FND_DP_OFF);
+
+		FND_writeData((watchData.min % 10 * 1000) + (watchData.sec *10) + (watchData.msec/100));
+		if(watchData.msec%100 <50)
+		{
+			FND_WriteDp(FND_DP_10, FND_DP_ON);
+		}
+		else {
+			FND_WriteDp(FND_DP_10, FND_DP_OFF);
+		}
+
+		if(watchData.msec <500)
+		{
+			FND_WriteDp(FND_DP_1000, FND_DP_ON);
+		}
+		else {
+			FND_WriteDp(FND_DP_1000, FND_DP_OFF);
+		}
+}

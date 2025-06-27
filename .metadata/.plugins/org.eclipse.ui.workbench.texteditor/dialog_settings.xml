@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<item key="hasShownOverlayPopupBefore" value="true"/>
-	<item key="replaceBarOpen" value="false"/>
+	<item key="replaceBarOpen" value="true"/>
 	<list key="searchhistory">
+		<item value="remain"/>
+		<item value="-&gt;"/>
+		<item value="ext"/>
+		<item value="exti9"/>
+		<item value="buzzer"/>
 		<item value="fndi"/>
 		<item value="fnd"/>
 		<item value="inter"/>
 		<item value="TIM"/>
 		<item value="TIM_ty"/>
+	</list>
+	<list key="replacehistory">
+		<item value="."/>
+		<item value="motor"/>
 	</list>
 </section>

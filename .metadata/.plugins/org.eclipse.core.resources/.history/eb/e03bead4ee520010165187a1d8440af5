@@ -1,0 +1,94 @@
+/*
+ * dht11.c
+ *
+ *  Created on: Jun 26, 2025
+ *      Author: kccistc
+ */
+
+
+
+#include "dht11.h"
+
+GPIO_TypeDef * dht11port;
+uint32_t dht11pin;
+
+void delay_us(uint32_t us)
+{
+    uint32_t cycles = (SystemCoreClock / 1000000) * us;
+    uint32_t start = DWT->CYCCNT;
+    while ((DWT->CYCCNT - start) < cycles);
+}
+
+
+void DHT11_Init(GPIO_TypeDef * port, uint16_t GPIO_Pin)
+{
+   dht11port = port;
+   dht11pin = GPIO_Pin;
+   Set_Pin_Output();
+   HAL_GPIO_WritePin(dht11port, dht11pin, SET);
+   HAL_NVIC_DisableIRQ(EXTI9_5_IRQn);
+}
+
+void Set_Pin_Output()
+{
+    GPIO_InitTypeDef GPIO_InitStruct = {0};
+    GPIO_InitStruct.Pin = dht11pin;
+    GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+    GPIO_InitStruct.Pull = GPIO_NOPULL;
+    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+    HAL_GPIO_Init(dht11port, &GPIO_InitStruct);
+}
+
+void Set_Pin_Input()
+{
+    GPIO_InitTypeDef GPIO_InitStruct = {0};
+    GPIO_InitStruct.Pin = dht11pin;
+    GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING_FALLING;  // EXTI 모드
+    GPIO_InitStruct.Pull = GPIO_NOPULL;
+    HAL_GPIO_Init(dht11port, &GPIO_InitStruct);
+
+    __HAL_GPIO_EXTI_CLEAR_IT(dht11pin); // 이전 인터럽트 플래그 클리어
+}
+
+void dht_start()
+{   HAL_TIM_IC_Stop_IT(&htim4, TIM_CHANNEL_1);
+   __HAL_TIM_SET_COUNTER(&htim4, 0);
+   HAL_GPIO_WritePin(dht11port, dht11pin, RESET);
+   HAL_Delay(18);
+   HAL_GPIO_WritePin(dht11port, dht11pin, SET);
+   delay_us(30);
+   Set_Pin_Input();
+   delay_us(30);
+   while(HAL_GPIO_ReadPin(dht11port, dht11pin) == 0)
+   {
+   }
+   while(HAL_GPIO_ReadPin(dht11port, dht11pin) == 1)
+   {
+   }
+   HAL_NVIC_EnableIRQ(EXTI9_5_IRQn);
+}
+
+void DHT11_CaptureProcess(TIM_HandleTypeDef *htim)
+{
+	uint32_t last_tick = 0;
+	uint8_t index = 0;
+	uint8_t data[40];
+
+        uint32_t now = DWT->CYCCNT;
+        uint32_t diff = (now - last_tick) / (SystemCoreClock / 1000000); // us 단위
+        last_tick = now;
+
+        if (index >= 0 && index < 40)
+        {
+            if (diff > 50) data[index++] = 1;
+            else           data[index++] = 0;
+
+            if (index >= 40)
+            {
+                HAL_NVIC_DisableIRQ(EXTI9_5_IRQn);
+                Set_Pin_Output();
+                HAL_GPIO_WritePin(dht11port, dht11pin, SET);
+            }
+        }
+
+}

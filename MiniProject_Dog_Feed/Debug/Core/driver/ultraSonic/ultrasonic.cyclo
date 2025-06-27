@@ -1,0 +1,3 @@
+../Core/driver/ultraSonic/ultrasonic.c:12:6:delay_us	2
+../Core/driver/ultraSonic/ultrasonic.c:21:6:UltraSonic_Init	1
+../Core/driver/ultraSonic/ultrasonic.c:28:5:UltraSonic_GetDistance	5

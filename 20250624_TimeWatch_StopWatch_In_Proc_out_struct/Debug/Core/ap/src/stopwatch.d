@@ -1,5 +1,5 @@
-Core/ap/src/stopwatch.o: ../Core/ap/src/stopwatch.c \
- C:/stm32_Harman/20250624_TimeWatch_StopWatch_In_Proc_out_struct/Core/ap/inc/stopwatch.h \
+Core/ap/src/stopWatch.o: ../Core/ap/src/stopWatch.c \
+ C:/stm32_Harman/20250624_TimeWatch_StopWatch_In_Proc_out_struct/Core/ap/inc/stopWatch.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h \
  ../Core/Inc/stm32f4xx_hal_conf.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h \
@@ -23,18 +23,23 @@ Core/ap/src/stopwatch.o: ../Core/ap/src/stopwatch.c \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h \
+ ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h \
+ ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h \
- ../Core/Inc/TIM.h ../Core/Inc/main.h \
+ ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h \
  C:/stm32_Harman/20250624_TimeWatch_StopWatch_In_Proc_out_struct/Core/ap/inc/Model_Watch.h \
  C:/stm32_Harman/20250624_TimeWatch_StopWatch_In_Proc_out_struct/Core/ap/inc/Controller.h \
+ C:/stm32_Harman/20250624_TimeWatch_StopWatch_In_Proc_out_struct/Core/ap/inc/stopWatch.h \
+ C:/stm32_Harman/20250624_TimeWatch_StopWatch_In_Proc_out_struct/Core/ap/inc/timeWatch.h \
  C:/stm32_Harman/20250624_TimeWatch_StopWatch_In_Proc_out_struct/Core/ap/inc/Presenter.h \
  C:/stm32_Harman/20250624_TimeWatch_StopWatch_In_Proc_out_struct/Core/driver/FND/FND.h \
- C:/stm32_Harman/20250624_TimeWatch_StopWatch_In_Proc_out_struct/Core/ap/inc/stopwatch.h \
- C:/stm32_Harman/20250624_TimeWatch_StopWatch_In_Proc_out_struct/Core/ap/inc/timewatch.h
-C:/stm32_Harman/20250624_TimeWatch_StopWatch_In_Proc_out_struct/Core/ap/inc/stopwatch.h:
+ C:/stm32_Harman/20250624_TimeWatch_StopWatch_In_Proc_out_struct/Core/driver/LCD/lcd.h \
+ ../Core/Inc/i2c.h ../Core/Inc/main.h \
+ C:/stm32_Harman/20250624_TimeWatch_StopWatch_In_Proc_out_struct/Core/driver/LedBar/LedBar.h
+C:/stm32_Harman/20250624_TimeWatch_StopWatch_In_Proc_out_struct/Core/ap/inc/stopWatch.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
 ../Core/Inc/stm32f4xx_hal_conf.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h:
@@ -58,15 +63,20 @@ C:/stm32_Harman/20250624_TimeWatch_StopWatch_In_Proc_out_struct/Core/ap/inc/stop
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h:
-../Core/Inc/TIM.h:
-../Core/Inc/main.h:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:
 C:/stm32_Harman/20250624_TimeWatch_StopWatch_In_Proc_out_struct/Core/ap/inc/Model_Watch.h:
 C:/stm32_Harman/20250624_TimeWatch_StopWatch_In_Proc_out_struct/Core/ap/inc/Controller.h:
+C:/stm32_Harman/20250624_TimeWatch_StopWatch_In_Proc_out_struct/Core/ap/inc/stopWatch.h:
+C:/stm32_Harman/20250624_TimeWatch_StopWatch_In_Proc_out_struct/Core/ap/inc/timeWatch.h:
 C:/stm32_Harman/20250624_TimeWatch_StopWatch_In_Proc_out_struct/Core/ap/inc/Presenter.h:
 C:/stm32_Harman/20250624_TimeWatch_StopWatch_In_Proc_out_struct/Core/driver/FND/FND.h:
-C:/stm32_Harman/20250624_TimeWatch_StopWatch_In_Proc_out_struct/Core/ap/inc/stopwatch.h:
-C:/stm32_Harman/20250624_TimeWatch_StopWatch_In_Proc_out_struct/Core/ap/inc/timewatch.h:
+C:/stm32_Harman/20250624_TimeWatch_StopWatch_In_Proc_out_struct/Core/driver/LCD/lcd.h:
+../Core/Inc/i2c.h:
+../Core/Inc/main.h:
+C:/stm32_Harman/20250624_TimeWatch_StopWatch_In_Proc_out_struct/Core/driver/LedBar/LedBar.h:
