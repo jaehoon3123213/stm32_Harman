@@ -1,0 +1,46 @@
+/*
+ * Listener_StopWatch.c
+ *
+ *  Created on: Jul 3, 2025
+ *      Author: kccistc
+ */
+
+
+#include "Listener_StopWatch.h"
+
+Button_Handler_t hBtnRunStop;
+Button_Handler_t hBtnClear;
+
+void Listener_StopWatch_CheckButton();
+
+
+void Listener_StopWatchInit()
+{
+	  Button_Init(&hBtnRunStop, GPIOB, GPIO_PIN_5);
+	  Button_Init(&hBtnClear, GPIOB, GPIO_PIN_3);
+
+
+}
+
+
+
+void Listener_StopWatchExcute()
+{
+
+	Listener_StopWatch_CheckButton();
+
+
+}
+
+void Listener_StopWatch_CheckButton()
+{
+ if (Button_GetState(&hBtnRunStop) == ACT_PUSHED) {
+	 osMessagePut(stopWatchEventMsgBox, EVENT_RUN_STOP, 0);
+ }
+ else if (Button_GetState(&hBtnRunStop) == ACT_PUSHED) {
+	 osMessagePut(stopWatchEventMsgBox, EVENT_CLEAR, 0);
+ }
+
+
+
+}

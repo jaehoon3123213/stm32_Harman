@@ -1,0 +1,10 @@
+11:17:54 **** Build of configuration Debug for project 20250701_ARM_RTOS_LEDBlink ****
+make -j16 all 
+arm-none-eabi-size  20250701_ARM_RTOS_LEDBlink.elf 
+   text	   data	    bss	    dec	    hex	filename
+  13884	     96	  18352	  32332	   7e4c	20250701_ARM_RTOS_LEDBlink.elf
+Finished building: default.size.stdout
+ 
+
+11:17:54 Build Finished. 0 errors, 0 warnings. (took 336ms)
+

@@ -1,0 +1,27 @@
+/*
+ * Listener.c
+ *
+ *  Created on: Jul 3, 2025
+ *      Author: kccistc
+ */
+#include "Listener.h"
+
+
+void Listener_Init()
+{
+	Listener_StopWatch_Init();
+
+	Button_Init(hbtn, GPIOx, pinNum);
+	Button_Init(hbtn, GPIOx, pinNum);
+	Button_Init(hbtn, GPIOx, pinNum);
+}
+
+
+void Listener_Excute()
+{
+	Listener_StopWatch_Excute();
+}
+
+
+
+

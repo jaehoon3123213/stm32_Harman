@@ -1,0 +1,54 @@
+/*
+ * StopWatch.c
+ *
+ *  Created on: Jul 3, 2025
+ *      Author: kccistc
+ */
+
+
+#include "StopWatch.h"
+
+stopWatch_t stopWatchData;
+
+void StopWatch_Init()
+{
+
+}
+
+void StopWatch_Excute()
+{
+
+stopWatchState_e state = Model_GetStopWatchState();
+
+switch(state)
+{
+case S_STOPWATCH_STOP:
+	StopWatch_Stop();
+	break;
+case S_STOPWATCH_RUN:
+	StopWatch_Run();
+	break;
+case S_STOPWATCH_CLEAR:
+	StopWatch_Clear();
+	break;
+default:
+	break;
+}
+}
+
+
+
+void StopWatch_Stop()
+{
+
+}
+
+void StopWatch_Run()
+{
+
+}
+
+void StopWatch_Clear()
+{
+    stopWatchData =
+}

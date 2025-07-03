@@ -1,0 +1,83 @@
+/*
+ * Presenter_StopWatch.c
+ *
+ *  Created on: Jul 3, 2025
+ *      Author: kccistc
+ */
+
+#include "Presenter_StopWatch.h"
+#include <stdio.h>
+#include "string.h"
+
+void Presenter_StopWatch_FND(stopWatch_t StopWatchData);
+void Presenter_StopWatch_LCD(stopWatch_t pstopWatchData);
+
+void Presenter_StopWatch_Init()
+{
+	LCD_Init(&hi2c1);
+}
+
+void Presenter_StopWatch_Excute()
+{
+
+	stopWatch_t *pstopWatchData;
+	stopWatch_t stopWatchData;
+	osEvent evt = osMailGet(stopWatchDataMailBox, osWaitForever);
+
+	if(evt.status == osEventMail){
+		pstopWatchData = evt.value.p;
+	  memcpy(&stopWatchData,pstopWatchData,sizeof(stopWatch_t));
+	  osMailFree(stopWatchDataMailBox, pstopWatchData);
+	  Presenter_StopWatch_FND(stopWatchData);
+	  Presenter_StopWatch_LCD(stopWatchData);
+	}
+}
+
+void Presenter_StopWatch_LCD(stopWatch_t pstopWatchData)
+{
+	char str[50];
+	char str2[50];
+	uint16_t state;
+	sprintf(str,"SW:%02d:%02d:%02d:%03d\n", pstopWatchData.hour, pstopWatchData.min, pstopWatchData.sec, pstopWatchData.msec);
+	state = Model_GetStopWatchState();
+	if(state == S_STOPWATCH_RUN)
+	{
+		strcpy(str2, "RUN");
+	}
+	else if(state == S_STOPWATCH_STOP)
+	{
+		strcpy(str2, "STOP");
+	}
+	else if(state == S_STOPWATCH_CLEAR)
+	{
+		strcpy(str2, "CLEAR");
+	}
+	LCD_writeStringXY(0, 0, str);
+	LCD_writeStringXY(1, 0, str2);
+}
+
+void Presenter_StopWatch_FND(stopWatch_t StopWatchData)
+{
+	FND_WriteData(StopWatchData.min%10*1000 + StopWatchData.sec%100*10 + StopWatchData.msec/100);
+	    if (StopWatchData.msec%100 < 50)
+	    {
+	        FND_WriteDp(FND_DP_10,FND_DP_ON);
+	    }
+	    else
+	    {
+	        FND_WriteDp(FND_DP_10,FND_DP_OFF);
+	    }
+
+	    if (StopWatchData.msec < 500)
+	    {
+	        FND_WriteDp(FND_DP_1000,FND_DP_ON);
+	    }
+	    else
+	    {
+	        FND_WriteDp(FND_DP_1000,FND_DP_OFF);
+	    }
+
+
+
+}
+

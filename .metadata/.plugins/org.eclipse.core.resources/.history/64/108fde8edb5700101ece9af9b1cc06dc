@@ -1,0 +1,64 @@
+/*
+ * Presenter_StopWatch.c
+ *
+ *  Created on: Jul 3, 2025
+ *      Author: kccistc
+ */
+
+#include "Presenter_StopWatch.h"
+#include <stdio.h>
+
+void Presenter_StopWatch_FND(stopWatch_t *pstopWatchData);
+void Presenter_StopWatch_LCD(stopWatch_t *pstopWatchData);
+
+void Presenter_StopWatch_Init()
+{
+	LCD_Init(&hi2c1);
+}
+
+void Presenter_StopWatch_Excute()
+{
+
+	stopWatch_t *pstopWatchData;
+	osEvent evt = osMailGet(stopWatchDataMailBox, osWaitForever);
+
+	if(evt.status == osEventMail){
+		pstopWatchData = evt.value.p;
+	  Presenter_StopWatch_FND(pstopWatchData);
+	  Presenter_StopWatch_LCD(pstopWatchData);
+	  osMailFree(stopWatchDataMailBox, pstopWatchData);
+	}
+}
+
+void Presenter_StopWatch_LCD(stopWatch_t *pstopWatchData)
+{
+	char str[50];
+	sprintf(str,"SW:%02d:%02d:%02d:%03d\n", pstopWatchData->hour, pstopWatchData->min, pstopWatchData->sec, pstopWatchData->msec);
+	LCD_writeStringXY(0, 0, str);
+}
+
+void Presenter_StopWatch_FND(stopWatch_t *pstopWatchData)
+{
+	FND_WriteData(pstopWatchData->min%10*1000 +  pstopWatchData->sec%100*10 + pstopWatchData->msec/100);
+
+
+	if(pstopWatchData -> msec%100 < 50) {
+		FND_WriteDp(FND_DP_10, FND_DP_ON);
+	}
+	else
+	{
+		FND_WriteDp(FND_DP_10, FND_DP_OFF);
+	}
+
+	if(pstopWatchData -> msec < 500) {
+		FND_WriteDp(FND_DP_100, FND_DP_ON);
+	}
+	else
+	{
+		FND_WriteDp(FND_DP_100, FND_DP_OFF);
+	}
+
+
+
+}
+

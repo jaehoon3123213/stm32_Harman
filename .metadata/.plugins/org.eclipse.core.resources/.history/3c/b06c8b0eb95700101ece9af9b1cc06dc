@@ -1,0 +1,61 @@
+/*
+ * Model.c
+ *
+ *  Created on: Jul 3, 2025
+ *      Author: kccistc
+ */
+
+
+#include "Model_StopWatch.h"
+#include "cmsis_os.h"
+
+
+
+
+static stopWatchState_e stopWatchState = S_STOPWATCH_STOP;
+
+osMessageQId stopWatchEventMsgBox;
+
+void Model_StopWatchInit()
+{
+	osMessageQDef(stopWatchEventQueue, 16, uint16_t);
+	stopWatchEventMsgBox = osMessageCreate(osMessageQ(stopWatchEventQueue), NULL);
+}
+
+void Model_SetStopWatchState(stopWatchState_e state)
+{
+	stopWatchState = state;
+}
+
+stopWatchState_e Model_GetStopWatchState()
+{
+	return stopWatchState;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

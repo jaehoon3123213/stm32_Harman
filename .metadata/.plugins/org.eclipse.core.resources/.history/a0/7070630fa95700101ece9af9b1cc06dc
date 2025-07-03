@@ -1,0 +1,6 @@
+../Core/Src/freertos.c:101:6:vApplicationGetIdleTaskMemory	1
+../Core/Src/freertos.c:115:6:MX_FREERTOS_Init	1
+../Core/Src/freertos.c:178:6:StartDefaultTask	1
+../Core/Src/freertos.c:196:6:StartButtonTask	4
+../Core/Src/freertos.c:270:6:StartLedTask	6
+../Core/Src/freertos.c:331:6:StartFNDTask	6

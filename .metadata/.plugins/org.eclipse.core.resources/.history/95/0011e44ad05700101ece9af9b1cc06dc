@@ -1,0 +1,33 @@
+/*
+ * Presenter_StopWatch.c
+ *
+ *  Created on: Jul 3, 2025
+ *      Author: kccistc
+ */
+
+#include "Presenter_StopWatch.h"
+
+void Presenter_StopWatch_FND(stopWatch_t *pstopWatchData);
+
+void Presenter_StopWatch_Init()
+{
+
+}
+
+void Presenter_StopWatch_Excute()
+{
+
+	stopWatch_t *pstopWatchData;
+	osEvent evt = osMailGet(stopWatchDataMailBox, osWaitForever);
+
+	if(evt.status == osEventMail){
+		pstopWatchData = evt.value.p;
+	  Presenter_StopWatch_FND(pstopWatchData);
+	}
+}
+
+void Presenter_StopWatch_FND(stopWatch_t *pstopWatchData)
+{
+	FND_WriteData(pstopWatchData->min%10*1000 +  pstopWatchData->sec%100*10 + pstopWatchData->msec/1000);
+}
+

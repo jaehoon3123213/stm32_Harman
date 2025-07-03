@@ -1,0 +1,15 @@
+/*
+ * Model.h
+ *
+ *  Created on: Jul 3, 2025
+ *      Author: kccistc
+ */
+
+#ifndef AP_MODEL_MODEL_H_
+#define AP_MODEL_MODEL_H_
+
+
+
+typedef enum{S_STOPWATCH_STOP, S_STOPWATCH_RUN, S_STOPWATCH_CLEAR} stopWatchState_e;
+
+#endif /* AP_MODEL_MODEL_H_ */
