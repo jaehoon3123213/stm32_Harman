@@ -1,0 +1,4 @@
+../Core/ap/Presenter/Presenter_TimeWatch.c:12:6:Presenter_TimeWatchInit	4	static
+../Core/ap/Presenter/Presenter_TimeWatch.c:17:6:Presenter_TimeWatchExecute	32	static
+../Core/ap/Presenter/Presenter_TimeWatch.c:34:6:Presenter_TimeWatch_FND	16	static
+../Core/ap/Presenter/Presenter_TimeWatch.c:50:6:Presenter_TimeWatch_LCD	80	static

@@ -1,0 +1,32 @@
+/*
+ * Controller_Distance.c
+ *
+ *  Created on: Jul 4, 2025
+ *      Author: kccistc
+ */
+
+#include "Controller_Distance.h"
+
+
+
+
+void Distance_Init()
+{
+
+}
+
+
+void Distance_Excute()
+{
+	    osEvent evt = osMessageGet(distanceEventMsgBox, 0);
+	    uint16_t evtState;
+	    int distance;
+	    if(evt.status == osEventMessage) {
+	    	evtState = evt.value.v;
+
+		if(evtState == EVENT_DIS) {
+			distance = UltraSonic_GetDistance();
+			osMessagePut(disDataEventMsgBox, distance, 0);
+		 }
+	    }
+}

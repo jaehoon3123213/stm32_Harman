@@ -3267,3 +3267,532 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64
 
 !ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2025-07-03 16:12:32.915
 !MESSAGE Existing sessions are:
+!SESSION 2025-07-04 10:29:53.211 -----------------------------------------------
+eclipse.buildId=Version 1.18.1
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2025-07-04 10:29:55.874
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2025-07-04 10:29:59.175
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2025-07-04 10:29:59.178
+!MESSAGE Log4j2 initialized with config file C:\stm32_Harman\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2025-07-04 10:30:05.610
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2025-07-04 10:30:45.468
+!MESSAGE Indexed '20250704_RTOS_Watch' (50 sources, 223 headers) in 3.46 sec: 19,290 declarations; 84,125 references; 11 unresolved inclusions; 235 syntax errors; 1,422 unresolved names (1.4%)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2025-07-04 11:59:22.845
+!MESSAGE Error - No active DSF-Session. tmpSessionId = 7 (contextManager row 121)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2025-07-04 11:59:22.845
+!MESSAGE Existing sessions are:
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2025-07-04 11:59:22.846
+!MESSAGE Error - No active DSF-Session. tmpSessionId = 7 (contextManager row 121)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2025-07-04 11:59:22.846
+!MESSAGE Existing sessions are:
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2025-07-04 12:06:10.088
+!MESSAGE Error in final launch sequence:
+
+Setup exceptions
+!STACK 1
+org.eclipse.core.runtime.CoreException: Setup exceptions
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:112)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:252)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:109)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:97)
+	at com.st.stm32cube.ide.mcu.debug.launch.DSFDelegate.launch(DSFDelegate.java:336)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:805)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1054)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1257)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 com.st.stm32cube.ide.mcu.debug.launch 4 0 2025-07-04 12:06:10.088
+!MESSAGE Setup exceptions
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2025-07-04 12:13:03.402
+!MESSAGE Error - No active DSF-Session. tmpSessionId = 20 (contextManager row 121)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2025-07-04 12:13:03.402
+!MESSAGE Existing sessions are:
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2025-07-04 12:13:03.403
+!MESSAGE Error - No active DSF-Session. tmpSessionId = 20 (contextManager row 121)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2025-07-04 12:13:03.403
+!MESSAGE Existing sessions are:
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2025-07-04 12:21:19.399
+!MESSAGE Error in final launch sequence:
+
+Device debug script
+!STACK 1
+org.eclipse.core.runtime.CoreException: Device debug script
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:112)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:252)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:109)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:97)
+	at com.st.stm32cube.ide.mcu.debug.launch.DSFDelegate.launch(DSFDelegate.java:336)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:805)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1054)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1257)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Contains: Device debug script
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 0 2025-07-04 12:21:19.399
+!MESSAGE Device debug script
+!SUBENTRY 2 com.st.stm32cube.ide.mcu.debug.launch 4 0 2025-07-04 12:21:19.399
+!MESSAGE Device debug script
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2025-07-04 12:29:25.305
+!MESSAGE Error - No active DSF-Session. tmpSessionId = 30 (contextManager row 121)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2025-07-04 12:29:25.306
+!MESSAGE Existing sessions are:
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2025-07-04 12:29:25.306
+!MESSAGE Error - No active DSF-Session. tmpSessionId = 30 (contextManager row 121)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2025-07-04 12:29:25.307
+!MESSAGE Existing sessions are:
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2025-07-04 12:33:44.763
+!MESSAGE Error - No active DSF-Session. tmpSessionId = 36 (contextManager row 121)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2025-07-04 12:33:44.764
+!MESSAGE Existing sessions are:
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2025-07-04 12:33:44.764
+!MESSAGE Error - No active DSF-Session. tmpSessionId = 36 (contextManager row 121)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2025-07-04 12:33:44.765
+!MESSAGE Existing sessions are:
+!SESSION 2025-07-04 12:35:02.372 -----------------------------------------------
+eclipse.buildId=Version 1.18.1
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2025-07-04 12:35:07.719
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2025-07-04 12:35:07.720
+!MESSAGE Log4j2 initialized with config file C:\stm32_Harman\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2025-07-04 12:35:12.918
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 104 2025-07-04 12:35:24.597
+!MESSAGE Program file does not exist
+!STACK 0
+java.io.FileNotFoundException: C:\stm32_Harman\20250704_RTOS_Watch\Debug\20250704_RTOS_Watch.elf not found
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.verifyProgramPath(LaunchUtils.java:130)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.checkBinaryDetails(GdbLaunchDelegate.java:330)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:152)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:109)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:97)
+	at com.st.stm32cube.ide.mcu.debug.launch.DSFDelegate.launch(DSFDelegate.java:336)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:805)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1054)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1257)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 104 2025-07-04 12:35:24.597
+!MESSAGE C:\stm32_Harman\20250704_RTOS_Watch\Debug\20250704_RTOS_Watch.elf not found
+!STACK 0
+java.io.FileNotFoundException: C:\stm32_Harman\20250704_RTOS_Watch\Debug\20250704_RTOS_Watch.elf not found
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.verifyProgramPath(LaunchUtils.java:130)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.checkBinaryDetails(GdbLaunchDelegate.java:330)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:152)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:109)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:97)
+	at com.st.stm32cube.ide.mcu.debug.launch.DSFDelegate.launch(DSFDelegate.java:336)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:805)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1054)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1257)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.resources 4 2 2025-07-04 12:35:43.035
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException(/20250704_RTOS_Watch/Debug/Core/Startup)[368]: java.lang.Exception: Resource '/20250704_RTOS_Watch/Debug/Core/Startup' does not exist.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:364)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:238)
+	at org.eclipse.core.internal.resources.Container.members(Container.java:244)
+	at org.eclipse.core.internal.resources.Container.members(Container.java:231)
+	at com.st.stm32cube.ide.mcu.toolchain.armnone.oss.makefile.MakefileGenerator.generateDependencies(MakefileGenerator.java:630)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPostbuildGeneration(CommonBuilder.java:878)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:790)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:530)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:471)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1077)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:296)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:352)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:441)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:444)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:555)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:503)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:585)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:595)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:491)
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:288)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:43)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2025-07-04 12:35:43.036
+!MESSAGE Resource '/20250704_RTOS_Watch/Debug/Core/Startup' does not exist.
+!STACK 0
+java.lang.Exception: Resource '/20250704_RTOS_Watch/Debug/Core/Startup' does not exist.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:364)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:238)
+	at org.eclipse.core.internal.resources.Container.members(Container.java:244)
+	at org.eclipse.core.internal.resources.Container.members(Container.java:231)
+	at com.st.stm32cube.ide.mcu.toolchain.armnone.oss.makefile.MakefileGenerator.generateDependencies(MakefileGenerator.java:630)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPostbuildGeneration(CommonBuilder.java:878)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:790)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:530)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:471)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1077)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:296)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:352)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:441)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:444)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:555)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:503)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:585)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:595)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:491)
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:288)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:43)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2025-07-04 12:35:43.036
+!MESSAGE Resource '/20250704_RTOS_Watch/Debug/Core/Startup' does not exist.
+!STACK 0
+java.lang.Exception: Resource '/20250704_RTOS_Watch/Debug/Core/Startup' does not exist.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:364)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:238)
+	at org.eclipse.core.internal.resources.Container.members(Container.java:244)
+	at org.eclipse.core.internal.resources.Container.members(Container.java:231)
+	at com.st.stm32cube.ide.mcu.toolchain.armnone.oss.makefile.MakefileGenerator.generateDependencies(MakefileGenerator.java:630)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPostbuildGeneration(CommonBuilder.java:878)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:790)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:530)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:471)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1077)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:296)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:352)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:441)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:444)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:555)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:503)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:585)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:595)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:491)
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:288)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:43)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.resources 4 75 2025-07-04 12:35:44.130
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 org.eclipse.cdt.managedbuilder.core 4 75 2025-07-04 12:35:44.130
+!MESSAGE Errors running builder 'CDT Builder' on project '20250704_RTOS_Watch'.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException(/20250704_RTOS_Watch/Debug/Core/Startup)[368]: java.lang.Exception: Resource '/20250704_RTOS_Watch/Debug/Core/Startup' does not exist.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:364)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:238)
+	at org.eclipse.core.internal.resources.Container.members(Container.java:244)
+	at org.eclipse.core.internal.resources.Container.members(Container.java:231)
+	at com.st.stm32cube.ide.mcu.toolchain.armnone.oss.makefile.MakefileGenerator.generateDependencies(MakefileGenerator.java:630)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPostbuildGeneration(CommonBuilder.java:878)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:790)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:530)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:471)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1077)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:296)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:352)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:441)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:444)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:555)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:503)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:585)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:595)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:491)
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:288)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:43)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 2 org.eclipse.core.resources 4 368 2025-07-04 12:35:44.131
+!MESSAGE Resource '/20250704_RTOS_Watch/Debug/Core/Startup' does not exist.
+!STACK 0
+java.lang.Exception: Resource '/20250704_RTOS_Watch/Debug/Core/Startup' does not exist.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:364)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:238)
+	at org.eclipse.core.internal.resources.Container.members(Container.java:244)
+	at org.eclipse.core.internal.resources.Container.members(Container.java:231)
+	at com.st.stm32cube.ide.mcu.toolchain.armnone.oss.makefile.MakefileGenerator.generateDependencies(MakefileGenerator.java:630)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPostbuildGeneration(CommonBuilder.java:878)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:790)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:530)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:471)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1077)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:296)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:352)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:441)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:444)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:555)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:503)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:585)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:595)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:491)
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:288)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:43)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2025-07-04 12:35:44.131
+!MESSAGE Resource '/20250704_RTOS_Watch/Debug/Core/Startup' does not exist.
+!STACK 0
+java.lang.Exception: Resource '/20250704_RTOS_Watch/Debug/Core/Startup' does not exist.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:364)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:238)
+	at org.eclipse.core.internal.resources.Container.members(Container.java:244)
+	at org.eclipse.core.internal.resources.Container.members(Container.java:231)
+	at com.st.stm32cube.ide.mcu.toolchain.armnone.oss.makefile.MakefileGenerator.generateDependencies(MakefileGenerator.java:630)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPostbuildGeneration(CommonBuilder.java:878)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:790)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:530)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:471)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1077)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:296)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:352)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:441)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:444)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:555)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:503)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:585)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:595)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:491)
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:288)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:43)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2025-07-04 12:45:07.259
+!MESSAGE Error - No active DSF-Session. tmpSessionId = 7 (contextManager row 121)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2025-07-04 12:45:07.259
+!MESSAGE Existing sessions are:
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2025-07-04 12:45:07.260
+!MESSAGE Error - No active DSF-Session. tmpSessionId = 7 (contextManager row 121)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2025-07-04 12:45:07.261
+!MESSAGE Existing sessions are:
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2025-07-04 12:45:27.001
+!MESSAGE Error in final launch sequence:
+
+Setup exceptions
+!STACK 1
+org.eclipse.core.runtime.CoreException: Setup exceptions
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:112)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:252)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:109)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:97)
+	at com.st.stm32cube.ide.mcu.debug.launch.DSFDelegate.launch(DSFDelegate.java:336)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:805)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1054)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1257)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 com.st.stm32cube.ide.mcu.debug.launch 4 0 2025-07-04 12:45:27.001
+!MESSAGE Setup exceptions
+
+!ENTRY org.eclipse.core.jobs 4 2 2025-07-04 13:53:15.851
+!MESSAGE An internal error occurred during: "Execute Debug Command".
+!STACK 0
+org.eclipse.core.runtime.AssertionFailedException: assertion failed: The application has not been initialized.
+	at org.eclipse.core.runtime.Assert.isTrue(Assert.java:119)
+	at org.eclipse.core.internal.runtime.InternalPlatform.assertInitialized(InternalPlatform.java:185)
+	at org.eclipse.core.internal.runtime.InternalPlatform.getAdapterManager(InternalPlatform.java:206)
+	at org.eclipse.core.runtime.Platform.getAdapterManager(Platform.java:661)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunch.getAdapter(GdbLaunch.java:454)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunch.disconnect(GdbLaunch.java:338)
+	at org.eclipse.debug.internal.core.commands.DisconnectCommand.execute(DisconnectCommand.java:35)
+	at org.eclipse.debug.internal.core.commands.ForEachCommand.doExecute(ForEachCommand.java:36)
+	at org.eclipse.debug.core.commands.AbstractDebugCommand$1.run(AbstractDebugCommand.java:215)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.jobs 2 2 2025-07-04 13:53:16.164
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.debug.core.DebugPlugin$EventDispatchJob RUNNING
+	 at java.base/java.lang.Object.wait0(Native Method)
+	 at java.base/java.lang.Object.wait(Object.java:366)
+	 at java.base/java.lang.Object.wait(Object.java:339)
+	 at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:200)
+	 at org.eclipse.swt.widgets.Display.syncExec(Display.java:4855)
+	 at com.st.stm32cube.ide.mcu.debug.launch.Activator$DebugEventListener.inDebugPerspective(Activator.java:152)
+	 at com.st.stm32cube.ide.mcu.debug.launch.Activator$DebugEventListener.handleDebugEvents(Activator.java:85)
+	 at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1287)
+	 at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	 at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1321)
+	 at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:498)
+	 at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.jobs 2 2 2025-07-04 13:53:16.164
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.cdt.dsf.gdb.internal.ui.console.GdbBasicCliConsole$InputReadJob RUNNING
+	 at java.base/java.lang.Object.wait0(Native Method)
+	 at java.base/java.lang.Object.wait(Object.java:366)
+	 at java.base/java.lang.Object.wait(Object.java:339)
+	 at org.eclipse.ui.console.IOConsoleInputStream.waitForData(IOConsoleInputStream.java:140)
+	 at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:91)
+	 at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:113)
+	 at org.eclipse.cdt.dsf.gdb.internal.ui.console.GdbBasicCliConsole$InputReadJob.run(GdbBasicCliConsole.java:248)
+	 at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SESSION 2025-07-04 13:53:17.274 -----------------------------------------------
+eclipse.buildId=Version 1.18.1
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2025-07-04 13:53:22.245
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2025-07-04 13:53:22.246
+!MESSAGE Log4j2 initialized with config file C:\stm32_Harman\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2025-07-04 13:53:27.285
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2025-07-04 15:22:47.844 -----------------------------------------------
+eclipse.buildId=Version 1.18.1
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2025-07-04 15:22:53.549
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2025-07-04 15:22:53.550
+!MESSAGE Log4j2 initialized with config file C:\stm32_Harman\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2025-07-04 15:22:59.080
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2025-07-04 15:24:30.681
+!MESSAGE Error - No active DSF-Session. tmpSessionId = 1 (contextManager row 121)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2025-07-04 15:24:30.683
+!MESSAGE Existing sessions are:
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2025-07-04 15:26:10.958
+!MESSAGE Error - No active DSF-Session. tmpSessionId = 2 (contextManager row 121)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2025-07-04 15:26:10.959
+!MESSAGE Existing sessions are:
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2025-07-04 15:26:10.960
+!MESSAGE Error - No active DSF-Session. tmpSessionId = 2 (contextManager row 121)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2025-07-04 15:26:10.960
+!MESSAGE Existing sessions are:
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2025-07-04 15:26:10.960
+!MESSAGE Error - No active DSF-Session. tmpSessionId = 2 (contextManager row 121)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2025-07-04 15:26:10.960
+!MESSAGE Existing sessions are:
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2025-07-04 15:26:10.961
+!MESSAGE Error - No active DSF-Session. tmpSessionId = 2 (contextManager row 121)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2025-07-04 15:26:10.961
+!MESSAGE Existing sessions are:
+!SESSION 2025-07-04 15:32:18.310 -----------------------------------------------
+eclipse.buildId=Version 1.18.1
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2025-07-04 15:32:27.949
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2025-07-04 15:32:27.950
+!MESSAGE Log4j2 initialized with config file C:\stm32_Harman\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2025-07-04 15:32:33.254
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2025-07-04 15:43:43.038
+!MESSAGE Error - No active DSF-Session. tmpSessionId = 7 (contextManager row 121)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2025-07-04 15:43:43.038
+!MESSAGE Existing sessions are:
+!SESSION 2025-07-05 11:42:29.839 -----------------------------------------------
+eclipse.buildId=Version 1.18.1
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2025-07-05 11:42:37.869
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2025-07-05 11:42:37.872
+!MESSAGE Log4j2 initialized with config file C:\stm32_Harman\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2025-07-05 11:42:49.153
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2025-07-05 11:45:05.278
+!MESSAGE Indexed '250704_RTOS_Total_Module' (68 sources, 179 headers) in 3.63 sec: 17,269 declarations; 87,050 references; 1 unresolved inclusions; 202 syntax errors; 241 unresolved names (0.23%)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2025-07-05 12:07:26.555
+!MESSAGE Error - No active DSF-Session. tmpSessionId = 8 (contextManager row 121)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2025-07-05 12:07:26.555
+!MESSAGE Existing sessions are:
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2025-07-05 12:07:26.556
+!MESSAGE Error - No active DSF-Session. tmpSessionId = 8 (contextManager row 121)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2025-07-05 12:07:26.556
+!MESSAGE Existing sessions are:
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2025-07-05 12:07:26.557
+!MESSAGE Error - No active DSF-Session. tmpSessionId = 8 (contextManager row 121)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2025-07-05 12:07:26.557
+!MESSAGE Existing sessions are:

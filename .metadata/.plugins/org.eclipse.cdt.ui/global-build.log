@@ -1,21 +1,25 @@
-16:49:13 **** Incremental Build of configuration Debug for project 20250703_RTOS_LED_StopWatch ****
+12:56:44 **** Incremental Build of configuration Debug for project 250704_RTOS_Total_Module ****
 make -j16 all 
-arm-none-eabi-gcc "../Core/Src/gpio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I"C:/stm32_Harman/20250703_RTOS_LED_StopWatch/Core/driver/Button" -I"C:/stm32_Harman/20250703_RTOS_LED_StopWatch/Core/driver/LedBar" -I"C:/stm32_Harman/20250703_RTOS_LED_StopWatch/Core/driver/LCD" -I"C:/stm32_Harman/20250703_RTOS_LED_StopWatch/Core/driver/FND" -I"C:/stm32_Harman/20250703_RTOS_LED_StopWatch/Core/ap/Controller" -I"C:/stm32_Harman/20250703_RTOS_LED_StopWatch/Core/ap/Listener" -I"C:/stm32_Harman/20250703_RTOS_LED_StopWatch/Core/ap/Model" -I"C:/stm32_Harman/20250703_RTOS_LED_StopWatch/Core/driver" -I"C:/stm32_Harman/20250703_RTOS_LED_StopWatch/Core/ap/Presenter" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/gpio.d" -MT"Core/Src/gpio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/gpio.o"
-arm-none-eabi-gcc -o "20250703_RTOS_LED_StopWatch.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\stm32_Harman\20250703_RTOS_LED_StopWatch\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="20250703_RTOS_LED_StopWatch.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 20250703_RTOS_LED_StopWatch.elf
+arm-none-eabi-gcc "../Core/ap/Presenter/Presenter_TimeWatch.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I"C:/stm32_Harman/250704_RTOS_Total_Module/Core/driver/Button" -I"C:/stm32_Harman/250704_RTOS_Total_Module/Core/driver/LedBar" -I"C:/stm32_Harman/250704_RTOS_Total_Module/Core/driver/LCD" -I"C:/stm32_Harman/250704_RTOS_Total_Module/Core/driver/FND" -I"C:/stm32_Harman/250704_RTOS_Total_Module/Core/ap/Controller" -I"C:/stm32_Harman/250704_RTOS_Total_Module/Core/ap/Listener" -I"C:/stm32_Harman/250704_RTOS_Total_Module/Core/ap/Model" -I"C:/stm32_Harman/250704_RTOS_Total_Module/Core/ap/Presenter" -I"C:/stm32_Harman/250704_RTOS_Total_Module/Core/driver/DHT11" -I"C:/stm32_Harman/250704_RTOS_Total_Module/Core/driver/UltraSonic" -I"C:/stm32_Harman/250704_RTOS_Total_Module/Core/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/ap/Presenter/Presenter_TimeWatch.d" -MT"Core/ap/Presenter/Presenter_TimeWatch.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/ap/Presenter/Presenter_TimeWatch.o"
+../Core/ap/Presenter/Presenter_TimeWatch.c: In function 'Presenter_TimeWatch_LCD':
+../Core/ap/Presenter/Presenter_TimeWatch.c:55:25: warning: variable 'prevstate' set but not used [-Wunused-but-set-variable]
+   55 |         static uint16_t prevstate = S_TIMEWATCH_MODIFY_MIN;
+      |                         ^~~~~~~~~
+arm-none-eabi-gcc -o "250704_RTOS_Total_Module.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\stm32_Harman\250704_RTOS_Total_Module\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="250704_RTOS_Total_Module.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 250704_RTOS_Total_Module.elf
  
-arm-none-eabi-size  20250703_RTOS_LED_StopWatch.elf 
-arm-none-eabi-objdump -h -S 20250703_RTOS_LED_StopWatch.elf  > "20250703_RTOS_LED_StopWatch.list"
+arm-none-eabi-size  250704_RTOS_Total_Module.elf 
+arm-none-eabi-objdump -h -S 250704_RTOS_Total_Module.elf  > "250704_RTOS_Total_Module.list"
    text	   data	    bss	    dec	    hex	filename
-  29028	    192	  18608	  47828	   bad4	20250703_RTOS_LED_StopWatch.elf
+  34800	    196	  18964	  53960	   d2c8	250704_RTOS_Total_Module.elf
 Finished building: default.size.stdout
  
-Finished building: 20250703_RTOS_LED_StopWatch.list
+Finished building: 250704_RTOS_Total_Module.list
  
-16:49:15 **** Incremental Build of configuration Debug for project 20250703_RTOS_LED_StopWatch ****
+12:56:45 **** Incremental Build of configuration Debug for project 250704_RTOS_Total_Module ****
 make -j16 all 
-arm-none-eabi-size  20250703_RTOS_LED_StopWatch.elf 
+arm-none-eabi-size  250704_RTOS_Total_Module.elf 
    text	   data	    bss	    dec	    hex	filename
-  29028	    192	  18608	  47828	   bad4	20250703_RTOS_LED_StopWatch.elf
+  34800	    196	  18964	  53960	   d2c8	250704_RTOS_Total_Module.elf
 Finished building: default.size.stdout
  

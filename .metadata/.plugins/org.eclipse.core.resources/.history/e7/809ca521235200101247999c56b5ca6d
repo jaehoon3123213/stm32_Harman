@@ -1,6 +1,0 @@
-../Core/ap/src/queue.c:10:6:Que_Init	1
-../Core/ap/src/queue.c:17:5:isQueFull	1
-../Core/ap/src/queue.c:23:5:isQueEmpty	1
-../Core/ap/src/queue.c:28:6:enQue	2
-../Core/ap/src/queue.c:38:5:deQue	2
-../Core/ap/src/queue.c:49:5:peekQue	2

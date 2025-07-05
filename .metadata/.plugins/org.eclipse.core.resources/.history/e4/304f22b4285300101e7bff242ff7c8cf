@@ -1,4 +1,0 @@
-../Core/driver/motor/motor.c:9:6:motor_Init	1
-../Core/driver/motor/motor.c:16:6:motor_SetDuty	5
-../Core/driver/motor/motor.c:22:6:motor_Start	1
-../Core/driver/motor/motor.c:27:6:motor_Stop	1

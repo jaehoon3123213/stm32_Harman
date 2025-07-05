@@ -1,7 +1,0 @@
-../Core/ap/src/Presenter.c:26:6:Presenter_outData	1
-../Core/ap/src/Presenter.c:32:6:Presenter_Excute	2
-../Core/ap/src/Presenter.c:44:6:Presenter_DispTimeWatch	2
-../Core/ap/src/Presenter.c:59:6:Presenter_DispStopWatch	3
-../Core/ap/src/Presenter.c:84:6:Presnter_DispMonitorTimeWatch	1
-../Core/ap/src/Presenter.c:96:6:Presnter_DispMonitorStopWatch	1
-../Core/ap/src/Presenter.c:107:6:Presnter_DispLCD	1

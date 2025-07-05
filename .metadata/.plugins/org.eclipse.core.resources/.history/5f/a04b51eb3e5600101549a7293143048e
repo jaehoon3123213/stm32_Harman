@@ -1,7 +1,0 @@
-../Core/ap/src/Presenter.c:26:6:Presenter_outData	16	static
-../Core/ap/src/Presenter.c:32:6:Presenter_Excute	8	static
-../Core/ap/src/Presenter.c:44:6:Presenter_DispTimeWatch	16	static
-../Core/ap/src/Presenter.c:59:6:Presenter_DispStopWatch	16	static
-../Core/ap/src/Presenter.c:84:6:Presnter_DispMonitorTimeWatch	88	static
-../Core/ap/src/Presenter.c:96:6:Presnter_DispMonitorStopWatch	88	static
-../Core/ap/src/Presenter.c:107:6:Presnter_DispLCD	16	static

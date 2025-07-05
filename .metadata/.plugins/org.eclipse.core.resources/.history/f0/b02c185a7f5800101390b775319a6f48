@@ -1,0 +1,24 @@
+/*
+ * Model_Mode.c
+ *
+ *  Created on: Jul 4, 2025
+ *      Author: kccistc
+ */
+
+#include "Model_Mode.h"
+
+
+
+typedef enum {S_TIME_WATCH_MODE, S_STOP_WATCH_MODE} eModestate_t;
+
+eModestate_t  modeState = S_TIME_WATCH_MODE;
+
+void Model_SetModeState(eModestate_t state)
+{
+	modeState = state;
+}
+
+eModestate_t Model_GetModeState()
+{
+	return modeState;
+}

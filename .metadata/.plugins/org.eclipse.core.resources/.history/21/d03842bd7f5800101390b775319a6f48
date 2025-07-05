@@ -1,0 +1,43 @@
+/*
+ * Listener.c
+ *
+ *  Created on: Jul 3, 2025
+ *      Author: kccistc
+ */
+#include "Listener.h"
+
+
+void Listener_Init()
+{
+	Listener_TimeWatchInit();
+	Listener_StopWatchInit();
+
+
+}
+
+
+void Listener_Excute()
+{
+	eModestate_t state = Model_GetModeState();
+
+	switch(state)
+	{
+	case S_TIME_WATCH_MODE:
+		break;
+	case S_STOP_WATCH_MODE:
+       	Listener_StopWatchExcute();
+       	break;
+	}
+}
+
+void Listener_CheckButton()
+{
+ if (Button_GetState(&hBtnMode) == ACT_RELEASED) {
+	 osMessagePut(stopWatchEventMsgBox, EVENT_MODE, 0);
+ }
+
+
+}
+
+
+

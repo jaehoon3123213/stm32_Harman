@@ -1,0 +1,91 @@
+11:45:10 **** Incremental Build of configuration Debug for project 20250704_RTOS_Watch ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/driver/ultraSonic/ultrasonic.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I"C:/stm32_Harman/20250704_RTOS_Watch/Core/driver/Button" -I"C:/stm32_Harman/20250704_RTOS_Watch/Core/driver/LedBar" -I"C:/stm32_Harman/20250704_RTOS_Watch/Core/driver/LCD" -I"C:/stm32_Harman/20250704_RTOS_Watch/Core/driver/FND" -I"C:/stm32_Harman/20250704_RTOS_Watch/Core/ap/Controller" -I"C:/stm32_Harman/20250704_RTOS_Watch/Core/ap/Listener" -I"C:/stm32_Harman/20250704_RTOS_Watch/Core/ap/Model" -I"C:/stm32_Harman/20250704_RTOS_Watch/Core/driver" -I"C:/stm32_Harman/20250704_RTOS_Watch/Core/ap/Presenter" -I"C:/stm32_Harman/20250704_RTOS_Watch/Core/driver/DHT11" -I"C:/stm32_Harman/20250704_RTOS_Watch/Core/driver/ultraSonic" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/driver/ultraSonic/ultrasonic.d" -MT"Core/driver/ultraSonic/ultrasonic.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/driver/ultraSonic/ultrasonic.o"
+arm-none-eabi-gcc "../Core/ap/Listener/Listener_distance.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I"C:/stm32_Harman/20250704_RTOS_Watch/Core/driver/Button" -I"C:/stm32_Harman/20250704_RTOS_Watch/Core/driver/LedBar" -I"C:/stm32_Harman/20250704_RTOS_Watch/Core/driver/LCD" -I"C:/stm32_Harman/20250704_RTOS_Watch/Core/driver/FND" -I"C:/stm32_Harman/20250704_RTOS_Watch/Core/ap/Controller" -I"C:/stm32_Harman/20250704_RTOS_Watch/Core/ap/Listener" -I"C:/stm32_Harman/20250704_RTOS_Watch/Core/ap/Model" -I"C:/stm32_Harman/20250704_RTOS_Watch/Core/driver" -I"C:/stm32_Harman/20250704_RTOS_Watch/Core/ap/Presenter" -I"C:/stm32_Harman/20250704_RTOS_Watch/Core/driver/DHT11" -I"C:/stm32_Harman/20250704_RTOS_Watch/Core/driver/ultraSonic" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/ap/Listener/Listener_distance.d" -MT"Core/ap/Listener/Listener_distance.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/ap/Listener/Listener_distance.o"
+arm-none-eabi-gcc "../Core/ap/Controller/Controller_Distance.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I"C:/stm32_Harman/20250704_RTOS_Watch/Core/driver/Button" -I"C:/stm32_Harman/20250704_RTOS_Watch/Core/driver/LedBar" -I"C:/stm32_Harman/20250704_RTOS_Watch/Core/driver/LCD" -I"C:/stm32_Harman/20250704_RTOS_Watch/Core/driver/FND" -I"C:/stm32_Harman/20250704_RTOS_Watch/Core/ap/Controller" -I"C:/stm32_Harman/20250704_RTOS_Watch/Core/ap/Listener" -I"C:/stm32_Harman/20250704_RTOS_Watch/Core/ap/Model" -I"C:/stm32_Harman/20250704_RTOS_Watch/Core/driver" -I"C:/stm32_Harman/20250704_RTOS_Watch/Core/ap/Presenter" -I"C:/stm32_Harman/20250704_RTOS_Watch/Core/driver/DHT11" -I"C:/stm32_Harman/20250704_RTOS_Watch/Core/driver/ultraSonic" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/ap/Controller/Controller_Distance.d" -MT"Core/ap/Controller/Controller_Distance.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/ap/Controller/Controller_Distance.o"
+../Core/ap/Listener/Listener_distance.c:12:1: error: unknown type name 'Button_Handler_t'
+   12 | Button_Handler_t hbtndis;
+      | ^~~~~~~~~~~~~~~~
+../Core/ap/Listener/Listener_distance.c: In function 'Listener_DistanceInit':
+../Core/ap/Listener/Listener_distance.c:22:9: warning: implicit declaration of function 'UltraSonic_Init' [-Wimplicit-function-declaration]
+   22 |         UltraSonic_Init (GPIOA, GPIO_PIN_9, GPIOC, GPIO_PIN_7);
+      |         ^~~~~~~~~~~~~~~
+../Core/ap/Listener/Listener_distance.c:22:26: error: 'GPIOA' undeclared (first use in this function)
+   22 |         UltraSonic_Init (GPIOA, GPIO_PIN_9, GPIOC, GPIO_PIN_7);
+      |                          ^~~~~
+../Core/ap/Listener/Listener_distance.c:22:26: note: each undeclared identifier is reported only once for each function it appears in
+../Core/ap/Listener/Listener_distance.c:22:33: error: 'GPIO_PIN_9' undeclared (first use in this function)
+   22 |         UltraSonic_Init (GPIOA, GPIO_PIN_9, GPIOC, GPIO_PIN_7);
+      |                                 ^~~~~~~~~~
+../Core/ap/Listener/Listener_distance.c:22:45: error: 'GPIOC' undeclared (first use in this function)
+   22 |         UltraSonic_Init (GPIOA, GPIO_PIN_9, GPIOC, GPIO_PIN_7);
+      |                                             ^~~~~
+../Core/ap/Listener/Listener_distance.c:22:52: error: 'GPIO_PIN_7' undeclared (first use in this function)
+   22 |         UltraSonic_Init (GPIOA, GPIO_PIN_9, GPIOC, GPIO_PIN_7);
+      |                                                    ^~~~~~~~~~
+../Core/ap/Listener/Listener_distance.c:23:9: warning: implicit declaration of function 'Button_Init' [-Wimplicit-function-declaration]
+   23 |         Button_Init(&hbtndis, GPIOB, GPIO_PIN_5);
+      |         ^~~~~~~~~~~
+../Core/ap/Listener/Listener_distance.c:23:31: error: 'GPIOB' undeclared (first use in this function)
+   23 |         Button_Init(&hbtndis, GPIOB, GPIO_PIN_5);
+      |                               ^~~~~
+../Core/ap/Listener/Listener_distance.c:23:38: error: 'GPIO_PIN_5' undeclared (first use in this function)
+   23 |         Button_Init(&hbtndis, GPIOB, GPIO_PIN_5);
+      |                                      ^~~~~~~~~~
+../Core/ap/Listener/Listener_distance.c: In function 'Listener_Distance_CheckButton':
+../Core/ap/Listener/Listener_distance.c:29:6: warning: implicit declaration of function 'Button_GetState' [-Wimplicit-function-declaration]
+   29 |  if (Button_GetState(&hbtndis) == ACT_PUSHED) {
+      |      ^~~~~~~~~~~~~~~
+../Core/ap/Listener/Listener_distance.c:29:35: error: 'ACT_PUSHED' undeclared (first use in this function)
+   29 |  if (Button_GetState(&hbtndis) == ACT_PUSHED) {
+      |                                   ^~~~~~~~~~
+../Core/ap/Listener/Listener_distance.c:30:10: warning: implicit declaration of function 'osMessagePut' [-Wimplicit-function-declaration]
+   30 |          osMessagePut(stopWatchEventMsgBox, EVENT_DIS, 0);
+      |          ^~~~~~~~~~~~
+../Core/ap/Listener/Listener_distance.c:30:23: error: 'stopWatchEventMsgBox' undeclared (first use in this function)
+   30 |          osMessagePut(stopWatchEventMsgBox, EVENT_DIS, 0);
+      |                       ^~~~~~~~~~~~~~~~~~~~
+../Core/ap/Listener/Listener_distance.c:30:45: error: 'EVENT_DIS' undeclared (first use in this function)
+   30 |          osMessagePut(stopWatchEventMsgBox, EVENT_DIS, 0);
+      |                                             ^~~~~~~~~
+make: *** [Core/ap/Listener/subdir.mk:31: Core/ap/Listener/Listener_distance.o] Error 1
+make: *** Waiting for unfinished jobs....
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:407,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/driver/ultraSonic/UltraSonic.h:11,
+                 from ../Core/driver/ultraSonic/ultrasonic.c:7:
+../Core/driver/ultraSonic/ultrasonic.c: In function 'delay_us':
+../Core/driver/ultraSonic/ultrasonic.c:14:27: error: 'htim5' undeclared (first use in this function); did you mean 'htim2'?
+   14 |    __HAL_TIM_SET_COUNTER(&htim5, 0);
+      |                           ^~~~~
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h:1282:59: note: in definition of macro '__HAL_TIM_SET_COUNTER'
+ 1282 | #define __HAL_TIM_SET_COUNTER(__HANDLE__, __COUNTER__)  ((__HANDLE__)->Instance->CNT = (__COUNTER__))
+      |                                                           ^~~~~~~~~~
+../Core/driver/ultraSonic/ultrasonic.c:14:27: note: each undeclared identifier is reported only once for each function it appears in
+   14 |    __HAL_TIM_SET_COUNTER(&htim5, 0);
+      |                           ^~~~~
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h:1282:59: note: in definition of macro '__HAL_TIM_SET_COUNTER'
+ 1282 | #define __HAL_TIM_SET_COUNTER(__HANDLE__, __COUNTER__)  ((__HANDLE__)->Instance->CNT = (__COUNTER__))
+      |                                                           ^~~~~~~~~~
+../Core/driver/ultraSonic/ultrasonic.c: In function 'UltraSonic_GetDistance':
+../Core/driver/ultraSonic/ultrasonic.c:47:27: error: 'htim5' undeclared (first use in this function); did you mean 'htim2'?
+   47 |    __HAL_TIM_SET_COUNTER(&htim5, 0);
+      |                           ^~~~~
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h:1282:59: note: in definition of macro '__HAL_TIM_SET_COUNTER'
+ 1282 | #define __HAL_TIM_SET_COUNTER(__HANDLE__, __COUNTER__)  ((__HANDLE__)->Instance->CNT = (__COUNTER__))
+      |                                                           ^~~~~~~~~~
+make: *** [Core/driver/ultraSonic/subdir.mk:19: Core/driver/ultraSonic/ultrasonic.o] Error 1
+../Core/ap/Controller/Controller_Distance.c: In function 'Distance_Excute':
+../Core/ap/Controller/Controller_Distance.c:28:36: warning: implicit declaration of function 'UltraSonic_GetDistance' [-Wimplicit-function-declaration]
+   28 |                         distance = UltraSonic_GetDistance();
+      |                                    ^~~~~~~~~~~~~~~~~~~~~~
+../Core/ap/Controller/Controller_Distance.c:29:38: error: 'DisDataEventMsgBox' undeclared (first use in this function); did you mean 'DistanceEventMsgBox'?
+   29 |                         osMessagePut(DisDataEventMsgBox, distance, 0);
+      |                                      ^~~~~~~~~~~~~~~~~~
+      |                                      DistanceEventMsgBox
+../Core/ap/Controller/Controller_Distance.c:29:38: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/ap/Controller/subdir.mk:31: Core/ap/Controller/Controller_Distance.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+
+11:45:11 Build Failed. 17 errors, 5 warnings. (took 386ms)
+

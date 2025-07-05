@@ -1,0 +1,18 @@
+/*
+ * Controller_Distance.h
+ *
+ *  Created on: Jul 4, 2025
+ *      Author: kccistc
+ */
+
+#ifndef AP_CONTROLLER_CONTROLLER_DISTANCE_H_
+#define AP_CONTROLLER_CONTROLLER_DISTANCE_H_
+
+#include "Model_Distance.h"
+#include "cmsis_os.h"
+#include "ultrasonic.h"
+
+void Distance_Init();
+void Distance_Excute();
+
+#endif /* AP_CONTROLLER_CONTROLLER_DISTANCE_H_ */

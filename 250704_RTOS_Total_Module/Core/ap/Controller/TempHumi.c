@@ -1,0 +1,53 @@
+/*
+ * TempHumi.c
+ *
+ *  Created on: Jul 4, 2025
+ *      Author: kccistc
+ */
+
+#include "TempHumi.h"
+#include "lcd.h"
+#include <string.h>
+
+TempHumi_t TempHumiData;
+
+void TempHumi_Init()
+{
+	TempHumiData.TempHumi = 0;
+
+	TempHumi_t *pTempHumiData = osMailAlloc(TempHumiDataMailBox, 0);
+	memcpy(pTempHumiData, &TempHumiData, sizeof(TempHumi_t));
+	osMailPut(TempHumiDataMailBox, pTempHumiData);
+}
+
+void TempHumi_Execute()
+{
+	TempHumi_Measurement();
+}
+
+void TempHumi_Measurement()
+{
+	osEvent evt = osMessageGet(TempHumiEventMsgBox, 0);
+	uint8_t evtState;
+	uint8_t temp = 0, humi = 0;
+
+	if (evt.status == osEventMessage) {
+	    evtState = evt.value.v;
+
+	    if (evtState == EVENT_TEMPHUMI) {
+
+	        DHT11_ReadData(&humi, &temp);
+	        TempHumiData.TempHumi = (temp * 100) + humi;
+
+	        TempHumi_t *pTempHumiData = osMailAlloc(TempHumiDataMailBox, 0);
+	        if (pTempHumiData != NULL) {
+	            memcpy(pTempHumiData, &TempHumiData, sizeof(TempHumi_t));
+	            osMailPut(TempHumiDataMailBox, pTempHumiData);
+	        } else {
+	            LCD_writeStringXY(0, 0, "fail");
+	        }
+	    } else {
+	        LCD_writeStringXY(0, 0, "error");
+	    }
+	}
+}

@@ -1,0 +1,176 @@
+/*
+ * StopWatch.c
+ *
+ *  Created on: Jul 3, 2025
+ *      Author: kccistc
+ */
+
+
+#include "StopWatch.h"
+#include  <string.h>
+
+stopWatch_t stopWatchData;
+
+static void StopWatch_Stop();
+static void StopWatch_Run();
+static void StopWatch_Clear();
+
+
+void StopWatch_Init()
+{
+	stopWatchData.hour = 0;
+	stopWatchData.min = 0;
+	stopWatchData.sec = 0;
+	stopWatchData.msec = 0;
+	stopWatch_t *pstopWatchData = osMailAlloc(stopWatchDataMailBox, 0);
+	memcpy(pstopWatchData, &stopWatchData, sizeof(stopWatch_t));
+	osMailPut(stopWatchDataMailBox, pstopWatchData);
+
+}
+
+void StopWatch_Excute()
+{
+
+stopWatchState_e state = Model_GetStopWatchState();
+
+switch(state)
+{
+case S_STOPWATCH_STOP:
+	StopWatch_Stop();
+	break;
+case S_STOPWATCH_RUN:
+	StopWatch_Run();
+	break;
+case S_STOPWATCH_CLEAR:
+	StopWatch_Clear();
+	break;
+default:
+	break;
+}
+}
+
+
+
+void StopWatch_Stop()
+{
+    osEvent evt = osMessageGet(stopWatchEventMsgBox, 0);
+    uint16_t evtState = 2;
+
+    if(evt.status == osEventMessage) {
+    	evtState = evt.value.v;
+
+	if(evtState == EVENT_RUN_STOP) {
+	   Model_SetStopWatchState(S_STOPWATCH_RUN);
+	 }
+
+	else if(evtState == EVENT_CLEAR) {
+	   Model_SetStopWatchState(S_STOPWATCH_CLEAR);
+	 }
+
+    }
+
+	stopWatch_t *pstopWatchData = osMailAlloc(stopWatchDataMailBox, 0);
+	memcpy(pstopWatchData, &stopWatchData, sizeof(stopWatch_t));
+	osMailPut(stopWatchDataMailBox, pstopWatchData);
+
+}
+
+void StopWatch_Run()
+{
+    osEvent evt = osMessageGet(stopWatchEventMsgBox, 0);
+    uint16_t evtState = 2;
+
+    if(evt.status == osEventMessage) {
+    	evtState = evt.value.v;
+
+	if(evtState == EVENT_RUN_STOP) {
+	   Model_SetStopWatchState(S_STOPWATCH_STOP);
+	 }
+    }
+
+	static stopWatch_t prevStopWatchData;
+
+	if (memcmp(&stopWatchData, &prevStopWatchData, sizeof(stopWatch_t)))//메모리를 비교해서 값이 다르면
+	{
+	memcpy(&prevStopWatchData, &stopWatchData, sizeof(stopWatch_t));
+	stopWatch_t *pstopWatchData = osMailAlloc(stopWatchDataMailBox, 0);
+	memcpy(pstopWatchData, &stopWatchData, sizeof(stopWatch_t));
+	osMailPut(stopWatchDataMailBox, pstopWatchData);
+	}
+}
+
+void StopWatch_Clear()
+{
+    osEvent evt = osMessageGet(stopWatchEventMsgBox, 0);
+    uint16_t evtState = 2;
+
+    if(evt.status == osEventMessage) {
+    	evtState = evt.value.v;
+
+	if(evtState == EVENT_RUN_STOP) {
+	   Model_SetStopWatchState(S_STOPWATCH_RUN);
+	 }
+    }
+//	Model_SetStopWatchState(S_STOPWATCH_STOP);
+	stopWatchData.hour = 0;
+	stopWatchData.min = 0;
+	stopWatchData.sec = 0;
+	stopWatchData.msec = 0;
+
+
+	stopWatch_t *pstopWatchData = osMailAlloc(stopWatchDataMailBox, 0);
+	memcpy(pstopWatchData, &stopWatchData, sizeof(stopWatch_t));
+	osMailPut(stopWatchDataMailBox, pstopWatchData);
+
+}
+
+
+void StopWatch_IncTimeCallBack()
+{
+	 if(Model_GetStopWatchState() != S_STOPWATCH_RUN)
+	 {
+		 return;
+	 }
+
+	if (stopWatchData.msec != 1000-1){
+		stopWatchData.msec++;
+		return;
+	}
+	stopWatchData.msec = 0;
+
+	if (stopWatchData.sec != 60-1){
+		stopWatchData.sec++;
+		return;
+	}
+	stopWatchData.sec = 0;
+
+	if (stopWatchData.min != 60-1){
+		stopWatchData.min++;
+		return;
+	}
+	stopWatchData.min = 0;
+
+	if (stopWatchData.hour != 24-1){
+		stopWatchData.hour++;
+		return;
+	}
+	stopWatchData.hour = 0;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

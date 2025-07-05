@@ -1,0 +1,27 @@
+/*
+ * Model_TimeWatch.c
+ *
+ *  Created on: Jul 4, 2025
+ *      Author: kccistc
+ */
+
+
+#include "Model_timeWatch.h"
+
+
+
+
+
+static timeWatch_t timeWatchState = S_timeWATCH_time;
+
+
+
+osMailQId timeWatchDataMailBox;
+osMailQDef (timeWatchDataQueue, 4, timeWatch_t);
+
+
+
+void Model_timeWatchInit()
+{
+	timeWatchDataMailBox = osMailCreate(osMailQ(timeWatchDataQueue), NULL);
+}

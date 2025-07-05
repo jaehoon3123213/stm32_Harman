@@ -1,0 +1,66 @@
+/*
+ * Presenter_TimeWatch.c
+ *
+ *  Created on: Jul 4, 2025
+ *      Author: kccistc
+ */
+#include "Presenter_TimeWatch.h"
+#include <stdio.h>
+#include "string.h"
+
+
+
+void Presenter_StopWatch_LCD(timeWatch_t pstopWatchData);
+void Presenter_TimeWatch_FND(timeWatch_t timeWatchData);
+
+
+void Presenter_TimeWatch_Init()
+{
+
+}
+
+void Presenter_TimeWatch_Excute()
+{
+	timeWatch_t *ptimeWatchData;
+	timeWatch_t timeWatchData;
+
+
+	osEvent evt = osMailGet(timeWatchDataMailBox, osWaitForever);
+
+	if(evt.status == osEventMail){
+		ptimeWatchData = evt.value.p;
+	  memcpy(&timeWatchData,ptimeWatchData,sizeof(timeWatch_t));
+	  osMailFree(timeWatchDataMailBox, ptimeWatchData);
+	}
+
+	 Presenter_TimeWatch_FND(timeWatchData);
+	 Presenter_TimeWatch_LCD(timeWatchData);
+}
+
+
+void Presenter_StopWatch_LCD(timeWatch_t pstopWatchData)
+{
+	char str[50];
+
+	sprintf(str,"TM:%02d:%02d:%02d:%03d", pstopWatchData.hour, pstopWatchData.min, pstopWatchData.sec, pstopWatchData.msec);
+	LCD_writeStringXY(0, 0, str);
+
+}
+
+
+
+
+void Presenter_TimeWatch_FND(timeWatch_t timeWatchData)
+{
+	FND_WriteData(timeWatchData.hour*100 + timeWatchData.min);
+	    if (timeWatchData.msec < 500)
+	    {
+	        FND_WriteDp(FND_DP_100,FND_DP_ON);
+	    }
+	    else
+	    {
+	        FND_WriteDp(FND_DP_100,FND_DP_OFF);
+	    }
+
+
+}

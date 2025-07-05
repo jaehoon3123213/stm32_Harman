@@ -1,0 +1,58 @@
+/*
+ * Controller.c
+ *
+ *  Created on: Jul 3, 2025
+ *      Author: kccistc
+ */
+
+
+#include "Controller.h"
+
+void Controller_CheckEventMode();
+
+void Controller_Init()
+{
+	StopWatch_Init();
+	TimeWatch_Init();
+}
+
+
+void Controller_Excute()
+{
+	eModestate_t state = Model_GetModeState();
+
+
+	switch (state)
+	{
+	case S_TIME_WATCH_MODE:
+		TimeWatch_Excute();
+	case S_STOP_WATCH_MODE:
+		StopWatch_Excute();
+	}
+
+
+}
+
+
+void Controller_CheckEventMode()
+{
+	osEvent evt = osMessageGet(modeEventMsgBox, 0);
+	uint16_t evtState = 0;
+
+	  if(evt.status == osEventMessage) {
+	    	evtState = evt.value.v;
+	    	if(evtState != EVT_MODE){
+	    		return;
+	    	}
+
+	    if(evtState == S_TIME_WATCH_MODE) {
+		   Model_SetModeState(S_TIME_WATCH_MODE);
+		 }
+
+	    if(evtState == S_STOP_WATCH_MODE) {
+		   Model_SetModeState(S_STOP_WATCH_MODE);
+		 }
+	  }
+
+
+}

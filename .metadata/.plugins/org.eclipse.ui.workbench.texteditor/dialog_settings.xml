@@ -3,6 +3,10 @@
 	<item key="hasShownOverlayPopupBefore" value="true"/>
 	<item key="replaceBarOpen" value="true"/>
 	<list key="searchhistory">
+		<item value="stop"/>
+		<item value="model"/>
+		<item value="stopWatch"/>
+		<item value="Stop"/>
 		<item value="remain"/>
 		<item value="-&gt;"/>
 		<item value="ext"/>
@@ -15,6 +19,8 @@
 		<item value="TIM_ty"/>
 	</list>
 	<list key="replacehistory">
+		<item value="time"/>
+		<item value="mode"/>
 		<item value="."/>
 		<item value="motor"/>
 	</list>

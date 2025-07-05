@@ -1,0 +1,35 @@
+/*
+ * Presenter.c
+ *
+ *  Created on: Jul 3, 2025
+ *      Author: kccistc
+ */
+
+
+#include "Presenter.h"
+
+
+void Presenter_Init()
+{
+	Presenter_StopWatch_Init();
+	Presenter_TimeWatch_Init();
+}
+
+
+void Presenter_Excute()
+{
+	static eModestate_t state = S_TIME_WATCH_MODE;
+
+    state = Model_GetModeState();
+	switch(state)
+	{
+	case S_TIME_WATCH_MODE:
+		Presenter_TimeWatch_Excute();
+		break;
+	case S_STOP_WATCH_MODE:
+		Presenter_StopWatch_Excute();
+		break;
+	}
+	Presenter_StopWatch_Excute();
+}
+

@@ -1,0 +1,59 @@
+/*
+ * Model.c
+ *
+ *  Created on: Jul 3, 2025
+ *      Author: kccistc
+ */
+
+
+#include "Model_StopWatch.h"
+
+
+
+
+
+static distanceState_e stopWatchState;
+
+osMessageQId DistanceEventMsgBox;
+osMessageQDef(DistanceEventQueue, 4, uint16_t);
+
+osMessageQId DistanceDataMsgBox;
+osMessageQDef(DistanceDataQueue, 4, uint16_t);
+
+
+
+
+void Model_DistanceInit()
+{
+	DistanceEventMsgBox = osMessageCreate(osMessageQ(DistanceEventQueue), NULL);
+	DistanceDataMsgBox = osMailCreate(osMailQ(DistanceDataQueue), NULL);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

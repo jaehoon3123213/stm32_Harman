@@ -1,0 +1,4 @@
+../Core/ap/Presenter/Presenter_Distance.c:13:6:Presenter_DistanceInit	1
+../Core/ap/Presenter/Presenter_Distance.c:17:6:Presenter_DistanceExecute	2
+../Core/ap/Presenter/Presenter_Distance.c:33:6:Presenter_Distance_FND	1
+../Core/ap/Presenter/Presenter_Distance.c:39:6:Presenter_Distance_LCD	1
