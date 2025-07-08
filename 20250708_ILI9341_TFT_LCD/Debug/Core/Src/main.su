@@ -1,0 +1,6 @@
+../Core/Src/main.c:69:5:__io_putchar	16	static
+../Core/Src/main.c:93:5:main	40	static,ignoring_inline_asm
+../Core/Src/main.c:183:6:SystemClock_Config	120	static
+../Core/Src/main.c:239:6:SDRAM_initialize	24	static
+../Core/Src/main.c:329:6:MPU_Config	24	static
+../Core/Src/main.c:371:6:Error_Handler	4	static,ignoring_inline_asm
